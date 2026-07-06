@@ -44,10 +44,6 @@ const About = () => {
             <h3>20+</h3>
             <p>Dự Án Hoàn Thành</p>
           </div>
-          <div className="stat-item">
-            <h3>15+</h3>
-            <p>Khách Hàng</p>
-          </div>
         </div>
       </div>
     </div>
