@@ -35,48 +35,46 @@ const Contact = () => {
     <section id="contact" className="contact-section">
       {/* Left: Info */}
       <div className="contact-info-panel">
-        <div className="contact-panel-tag">LIÊN HỆ</div>
-        <h2 className="contact-panel-title">HÃY CÙNG<br/>TẠO NÊN<br/>ĐIỀU GÌ ĐÓ<br/>ĐẶC BIỆT</h2>
+        <div className="contact-panel-tag">COLLABORATE</div>
+        <h2 className="contact-panel-title">
+          HÃY CÙNG<br/>TẠO NÊN<br/>ĐIỀU GÌ ĐÓ<br/><span className="text-orange">ĐẶC BIỆT</span>
+        </h2>
         <div className="contact-panel-divider"></div>
         <p className="contact-panel-sub">
-          Tôi luôn sẵn sàng lắng nghe những ý tưởng sáng tạo của bạn. Hãy để lại thông tin và tôi sẽ liên hệ lại sớm nhất!
+          Tôi luôn sẵn sàng lắng nghe những ý tưởng sáng tạo độc đáo của bạn. Hãy để lại thông tin liên lạc và tôi sẽ phản hồi sớm nhất có thể!
         </p>
         <div className="contact-panel-details">
           <div className="contact-panel-item">
-            <span className="contact-panel-label">Email</span>
-            <span>nguyenthianhtho@gmail.com</span>
+            <span className="contact-panel-label">EMAIL ADDRESS</span>
+            <a href="mailto:nguyenthianhtho@gmail.com" className="contact-panel-link">nguyenthianhtho@gmail.com</a>
           </div>
           <div className="contact-panel-item">
-            <span className="contact-panel-label">Điện thoại</span>
-            <span>0983 967 621</span>
+            <span className="contact-panel-label">HOTLINE</span>
+            <a href="tel:0983967621" className="contact-panel-link">0983 967 621</a>
           </div>
           <div className="contact-panel-item">
-            <span className="contact-panel-label">Facebook</span>
-            <a href="#" className="contact-panel-link">Nguyễn Thị Anh Thơ</a>
+            <span className="contact-panel-label">FACEBOOK</span>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="contact-panel-link">Nguyễn Thị Anh Thơ</a>
           </div>
         </div>
-        {/* Decorative squares */}
-        <div className="contact-deco-sq contact-deco-sq--1"></div>
-        <div className="contact-deco-sq contact-deco-sq--2"></div>
-        <div className="contact-deco-sq contact-deco-sq--3"></div>
       </div>
 
       {/* Right: Form */}
       <div className="contact-form-panel">
         {submitted ? (
           <div className="contact-success">
-            <CheckCircle size={60} color="#7DC6B7" />
-            <h3>Cảm ơn bạn đã liên hệ!</h3>
-            <p>Tôi sẽ phản hồi trong vòng 24 giờ. Hẹn gặp lại sớm! 🎨</p>
+            <CheckCircle size={64} className="neon-orange" />
+            <h3>Gửi tin nhắn thành công!</h3>
+            <p>Cảm ơn bạn đã liên hệ. Tôi sẽ phản hồi lại bạn trong vòng 24 giờ tới nhé! ✨</p>
             <button className="contact-reset-btn" onClick={() => { setSubmitted(false); setForm({ name: '', email: '', phone: '', service: '', message: '' }); }}>
-              Gửi tin nhắn khác
+              Ghi nhận phản hồi mới
             </button>
           </div>
         ) : (
           <form className="contact-form" onSubmit={handleSubmit} noValidate>
             <div className="contact-form-header">
-              <h3>GỬI TIN NHẮN</h3>
-              <p>Điền thông tin bên dưới để bắt đầu hợp tác</p>
+              <h3>CONNECT WITH ME</h3>
+              <p>Điền các thông tin để chúng ta thảo luận dự án tiếp theo</p>
             </div>
 
             <div className="form-row">
@@ -86,7 +84,7 @@ const Contact = () => {
                   id="name"
                   name="name"
                   type="text"
-                  placeholder="Nhập họ và tên của bạn"
+                  placeholder="Nhập tên của bạn..."
                   value={form.name}
                   onChange={handleChange}
                 />
@@ -121,23 +119,23 @@ const Contact = () => {
               <div className="form-group">
                 <label htmlFor="service">Dịch vụ quan tâm</label>
                 <select id="service" name="service" value={form.service} onChange={handleChange}>
-                  <option value="">-- Chọn dịch vụ --</option>
-                  <option value="photography">Chụp ảnh thời trang</option>
-                  <option value="portrait">Chụp ảnh chân dung</option>
-                  <option value="commercial">Chụp ảnh thương mại</option>
-                  <option value="event">Chụp ảnh sự kiện</option>
-                  <option value="other">Khác</option>
+                  <option value="">-- Chọn hình thức --</option>
+                  <option value="branding">Thiết kế bộ nhận diện thương hiệu</option>
+                  <option value="multimedia">Sản xuất MV & Key Visuals</option>
+                  <option value="social">Đổi mới hình ảnh Social Ads</option>
+                  <option value="photography">Chụp ảnh Nghệ thuật & Chân dung</option>
+                  <option value="other">Yêu cầu khác</option>
                 </select>
               </div>
             </div>
 
             <div className={`form-group${errors.message ? ' form-group--error' : ''}`}>
-              <label htmlFor="message">Nội dung *</label>
+              <label htmlFor="message">Nội dung yêu cầu *</label>
               <textarea
                 id="message"
                 name="message"
                 rows={5}
-                placeholder="Chia sẻ ý tưởng hoặc yêu cầu của bạn..."
+                placeholder="Mô tả tóm tắt ý tưởng hoặc yêu cầu báo giá của bạn..."
                 value={form.message}
                 onChange={handleChange}
               />
@@ -145,8 +143,8 @@ const Contact = () => {
             </div>
 
             <button type="submit" className="contact-submit-btn">
-              <Send size={18} />
-              <span>GỬI TIN NHẮN</span>
+              <Send size={16} />
+              <span>GỬI YÊU CẦU</span>
             </button>
           </form>
         )}

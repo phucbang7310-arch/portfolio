@@ -1,9 +1,10 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import About from './components/About';
+import Contents from './components/Contents';
 import Project1 from './components/Project1';
-import Project23 from './components/Project23';
+import Project2 from './components/Project2';
+import Project3 from './components/Project3';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -12,20 +13,16 @@ function App() {
     <>
       <Navbar />
       <div className="app-wrapper">
-        {/* Hero */}
-        <div id="hero" className="split-layout">
-          <Hero />
-          {/* About + Project1 stacked on the right column */}
-          <div id="about" style={{ display: 'flex', flexDirection: 'column' }}>
-            <About />
-            <Project1 />
-          </div>
-        </div>
+        {/* Landing + Work Experience Timeline */}
+        <Hero />
 
-        {/* Projects 2 & 3 */}
-        <div id="projects">
-          <Project23 />
-        </div>
+        {/* Behance-Style Directory contents */}
+        <Contents />
+
+        {/* Case Studies */}
+        <Project1 />
+        <Project2 />
+        <Project3 />
 
         {/* Contact Form */}
         <Contact />
