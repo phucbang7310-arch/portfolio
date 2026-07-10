@@ -1,0 +1,116 @@
+.contents-section {
+    background-color: #000000;
+    width: 100%;
+    color: #ffffff;
+    display: block;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contents-banner {
+    width: 100%;
+    display: block;
+    min-height: 50px;
+    /* Đảm bảo có khoảng không gian nếu chưa có ảnh */
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.contents-grid-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    box-sizing: border-box;
+}
+
+/* Định vị lại đường kẻ ngang dựa theo hàng chữ chuẩn hơn */
+.bg-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 160px;
+    /* Khoảng cách cố định giữa các đường kẻ tương ứng với 2 hàng chữ */
+    pointer-events: none;
+    box-sizing: border-box;
+}
+
+.bg-lines .line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.contents-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 100px;
+    column-gap: 40px;
+}
+
+.contents-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Tạo độ lệch hàng dưới */
+.contents-grid .contents-item:nth-child(n+4) {
+    transform: translateY(30px);
+}
+
+.item-number {
+    font-family: 'Inter', sans-serif;
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #ffffff;
+    margin-bottom: 10px;
+    background-color: #000000;
+    /* Đè lên đường kẻ */
+    padding: 0 20px;
+}
+
+.item-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    background-color: #000000;
+    padding: 5px 20px;
+}
+
+@media (max-width: 768px) {
+    .contents-grid {
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+    }
+
+    .contents-grid .contents-item:nth-child(n+4) {
+        transform: none;
+    }
+
+    .bg-lines {
+        display: none;
+        /* Ẩn đường kẻ trên mobile cho đỡ rối */
+    }
+
+    .item-number {
+        font-size: 3.5rem;
+    }
+}

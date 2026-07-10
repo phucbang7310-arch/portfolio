@@ -1,0 +1,174 @@
+/* Nhúng font chữ từ Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Inter:wght@300;400;700&display=swap');
+
+.about-section {
+    background-color: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+.about-container {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    /* Bên phải rộng hơn bên trái một chút */
+    gap: 60px;
+    align-items: center;
+}
+
+/* Khối ảnh bên trái */
+.about-left {
+    display: flex;
+    justify-content: center;
+}
+
+.mockup-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+/* Khối nội dung bên phải */
+.about-right {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Font chữ Xin Chào nghệ thuật màu cam */
+.greeting-text {
+    font-family: 'Alex Brush', cursive;
+    font-size: 6.5rem;
+    /* To, uốn lượn mềm mại */
+    color: #ff4500;
+    /* Màu cam neon nguyên bản */
+    margin: 0 0 20px 0;
+    font-weight: 400;
+    line-height: 1;
+}
+
+/* Đoạn văn giới thiệu */
+.bio-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+}
+
+.bio-text strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Đường gạch ngang tinh tế */
+.divider-line {
+    border: none;
+    border-top: 1px solid #444444;
+    margin: 25px 0;
+    width: 100%;
+}
+
+/* Phần hiển thị Icon công cụ */
+.tools-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.tool-column h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.icon-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* Icon dạng vuông (Ps, Ai, Id...) */
+.tool-icon {
+    background-color: #ff4500;
+    color: #000000;
+    font-weight: 700;
+    font-size: 0.75rem;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+/* Icon dạng tròn (Figma, AI Generator...) */
+.tool-icon-round {
+    background-color: #ff4500;
+    color: #000000;
+    font-weight: 700;
+    font-size: 0.7rem;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* Triệt tiêu margin mặc định của section và tiêu đề */
+.about-section {
+    background-color: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+
+    /* THÊM 2 DÒNG NÀY ĐỂ CHẶN MARGIN COLLAPSE */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.greeting-text {
+    font-family: 'Alex Brush', cursive;
+    font-size: 6.5rem;
+    color: #ff4500;
+    margin: 0 0 20px 0;
+    /* Đảm bảo margin-top bằng 0 */
+    padding-top: 0;
+    /* Triệt tiêu padding nếu có */
+    font-weight: 400;
+    line-height: 1;
+}
+
+/* Responsive cho màn hình điện thoại */
+@media (max-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: left;
+    }
+
+    .greeting-text {
+        font-size: 4.5rem;
+    }
+
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,59 +1,33 @@
 import React from 'react';
 
-const Contents = () => {
-  const handleScroll = (e, id) => {
-    e.preventDefault();
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
+const items = [
+  { num: '01', label: 'Music Video' },
+  { num: '02', label: 'Campaign' },
+  { num: '03', label: 'Event' },
+  { num: '04', label: 'Social Assets' },
+  { num: '05', label: 'Printing' },
+  { num: '06', label: 'Motion Graphic' },
+];
 
-  const sections = [
-    { num: '01', title: 'Music Video', hasAnchor: true, targetId: 'project-01', desc: 'GIỮ SỰC KHỎE EM ƠI' },
-    { num: '02', title: 'Campaign', hasAnchor: true, targetId: 'project-02', desc: 'ĐƯỜNG BIÊN HÒA TẾT 2026' },
-    { num: '03', title: 'Cinematic & Art', hasAnchor: true, targetId: 'project-03', desc: 'CYBERPUNK NEON GLOW' },
-    { num: '04', title: 'Social Assets', hasAnchor: false, desc: 'Facebook & TikTok Post Ads' },
-    { num: '05', title: 'Printing & Layout', hasAnchor: false, desc: 'Editorial & Event Tickets' },
-    { num: '06', title: 'Motion Graphic', hasAnchor: false, desc: 'TVC Reels & Storyboards' },
-  ];
-
-  return (
-    <section id="contents" className="contents-section">
-      <div className="contents-wrapper">
-        <div className="contents-title-area">
-          <h2 className="contents-outline-title">INDEX</h2>
-          <h1 className="contents-main-title">CONTENTS</h1>
-        </div>
-
-        <div className="contents-grid">
-          {sections.map((sec, idx) => (
-            <div key={idx} className={`contents-card ${sec.hasAnchor ? 'contents-card--clickable' : ''}`}>
-              {sec.hasAnchor ? (
-                <a href={`#${sec.targetId}`} onClick={(e) => handleScroll(e, sec.targetId)} className="contents-card-link">
-                  <div className="card-top">
-                    <span className="card-num">{sec.num}</span>
-                    <span className="card-indicator">→ VIEW CASE</span>
-                  </div>
-                  <h3 className="card-title">{sec.title}</h3>
-                  <p className="card-desc">{sec.desc}</p>
-                </a>
-              ) : (
-                <div className="contents-card-static">
-                  <div className="card-top">
-                    <span className="card-num">{sec.num}</span>
-                    <span className="card-indicator static-ind">• PREVIEW OUTLINE</span>
-                  </div>
-                  <h3 className="card-title">{sec.title}</h3>
-                  <p className="card-desc">{sec.desc}</p>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
+const Contents = () => (
+  <section id="contents" className="contents-section">
+    <div className="contents-heading-row">
+      <h2 className="contents-big-title">CONTENTS</h2>
+      <div className="contents-cursor-wrap">
+        <svg viewBox="0 0 24 28" width="52" height="52" fill="white">
+          <path d="M3 1 L3 22 L8 16 L11.5 24.5 L14.5 23.2 L11 14.8 L18 14.8 Z" />
+        </svg>
       </div>
-    </section>
-  );
-};
+    </div>
+    <div className="contents-grid">
+      {items.map(item => (
+        <div key={item.num} className="contents-cell">
+          <span className="contents-cell-num">{item.num}</span>
+          <span className="contents-cell-label">{item.label}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+);
 
 export default Contents;

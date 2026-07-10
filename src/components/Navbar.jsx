@@ -1,93 +1,60 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
-const navLinks = [
-  { label: 'Trang chủ', href: '#hero' },
-  { label: 'Kinh nghiệm', href: '#experience' },
-  { label: 'Mục lục', href: '#contents' },
-  { label: 'Dự án', href: '#project-01' },
-  { label: 'Liên hệ', href: '#contact' },
+const links = [
+  { label: 'Home',       href: '#hero' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Works',      href: '#contents' },
+  { label: 'Projects',   href: '#project-01' },
+  { label: 'Contact',    href: '#contact' },
 ];
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [open,     setOpen]     = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const handleLinkClick = (e, href) => {
+  const go = (e, href) => {
     e.preventDefault();
-    const target = document.querySelector(href);
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-    setMenuOpen(false);
+    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    setOpen(false);
   };
 
   return (
     <header className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
-      <div className="navbar-inner">
-        {/* Logo */}
-        <a href="#hero" className="navbar-logo" onClick={(e) => handleLinkClick(e, '#hero')}>
-          <span className="navbar-logo-dot"></span>
-          <span className="navbar-logo-text">ANH THƠ</span>
-        </a>
+      <a href="#hero" className="navbar-logo" onClick={e => go(e, '#hero')}>
+        <span className="navbar-logo-dot" />
+        <span className="navbar-logo-text">BORICA</span>
+      </a>
 
-        {/* Desktop Nav */}
-        <nav className="navbar-links">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="navbar-link"
-              onClick={(e) => handleLinkClick(e, link.href)}
-            >
-              {link.label}
-            </a>
-          ))}
-          <a
-            href="#contact"
-            className="navbar-cta"
-            onClick={(e) => handleLinkClick(e, '#contact')}
-          >
-            Hợp Tác
-          </a>
-        </nav>
-
-        {/* Mobile menu button */}
-        <button
-          className="navbar-burger"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          {menuOpen ? <X size={24} color="#FFF" /> : <Menu size={24} color="#FFF" />}
-        </button>
-      </div>
-
-      {/* Mobile Menu Overlay */}
-      <div className={`navbar-mobile${menuOpen ? ' navbar-mobile--open' : ''}`}>
-        {navLinks.map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
-            className="navbar-mobile-link"
-            onClick={(e) => handleLinkClick(e, link.href)}
-          >
-            {link.label}
+      <nav className="navbar-links">
+        {links.map(l => (
+          <a key={l.href} href={l.href} className="navbar-link" onClick={e => go(e, l.href)}>
+            {l.label}
           </a>
         ))}
-        <a
-          href="#contact"
-          className="navbar-mobile-cta"
-          onClick={(e) => handleLinkClick(e, '#contact')}
-        >
-          Hợp Tác Ngay
+        <a href="#contact" className="navbar-cta" onClick={e => go(e, '#contact')}>
+          Let's Talk
+        </a>
+      </nav>
+
+      <button className="navbar-burger" onClick={() => setOpen(!open)} aria-label="Menu">
+        {open ? <X size={22} /> : <Menu size={22} />}
+      </button>
+
+      <div className={`navbar-mobile${open ? ' open' : ''}`}>
+        {links.map(l => (
+          <a key={l.href} href={l.href} className="navbar-mobile-link" onClick={e => go(e, l.href)}>
+            {l.label}
+          </a>
+        ))}
+        <a href="#contact" className="navbar-mobile-cta" onClick={e => go(e, '#contact')}>
+          Let's Talk
         </a>
       </div>
     </header>

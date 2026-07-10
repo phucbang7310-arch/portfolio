@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Inter:wght@300;400;600;700&display=swap');
+
+.exp-section {
+    background-color: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 60px 40px;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+.exp-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tiêu đề "Work experience" với chữ Work uốn lượn nghệ thuật */
+.exp-title {
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: #ff4500;
+    /* Màu cam chủ đạo */
+    margin-bottom: 40px;
+}
+
+/* Biến chữ "Work" đầu tiên thành font nghệ thuật bằng pseudo-element nếu muốn, 
+   hoặc để đơn giản cấu trúc, ở đây ta áp dụng font lồng ghép */
+.exp-title::first-letter {
+    font-family: 'Alex Brush', cursive;
+    font-size: 6rem;
+    color: #ff4500;
+    padding-right: 10px;
+    line-height: 0;
+}
+
+/* Vùng chứa ảnh timeline */
+.timeline-wrapper {
+    width: 100%;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.timeline-graphics {
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Bố cục Grid 2 cột cho phần nội dung */
+.exp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.exp-column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Từng khối công việc */
+.exp-item {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mốc thời gian dạng /11.2025 - Now/ */
+.exp-date {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+/* Tên công ty & Vị trí */
+.exp-company {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    letter-spacing: 0.2px;
+}
+
+.exp-role {
+    font-weight: 400;
+}
+
+/* Đoạn mô tả ngắn dưới tên công ty */
+.exp-desc {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: #b0b0b0;
+    margin: 0 0 15px 0;
+    font-weight: 300;
+}
+
+/* Các gạch đầu dòng công việc */
+.exp-bullets {
+    margin: 0;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.exp-bullets li {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: #e0e0e0;
+    font-weight: 300;
+    position: relative;
+    list-style-type: disc;
+}
+
+/* Tối ưu hóa trên giao diện di động */
+@media (max-width: 768px) {
+    .exp-grid {
+        grid-template-columns: 1fr;
+        /* Chuyển thành 1 cột trên điện thoại */
+        gap: 40px;
+    }
+
+    .exp-title {
+        font-size: 2.5rem;
+    }
+
+    .exp-title::first-letter {
+        font-size: 4.5rem;
+    }
+}

@@ -46,15 +46,15 @@ const Contact = () => {
         <div className="contact-panel-details">
           <div className="contact-panel-item">
             <span className="contact-panel-label">EMAIL ADDRESS</span>
-            <a href="mailto:nguyenthianhtho@gmail.com" className="contact-panel-link">nguyenthianhtho@gmail.com</a>
+            <a href="mailto:heotrunghaucreativedesigner@gmail.com" className="contact-panel-link">heotrunghaucreativedesigner@gmail.com</a>
           </div>
           <div className="contact-panel-item">
             <span className="contact-panel-label">HOTLINE</span>
-            <a href="tel:0983967621" className="contact-panel-link">0983 967 621</a>
+            <a href="tel:0947934107" className="contact-panel-link">0947 934 107</a>
           </div>
           <div className="contact-panel-item">
             <span className="contact-panel-label">FACEBOOK</span>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="contact-panel-link">Nguyễn Thị Anh Thơ</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="contact-panel-link">Trung Hậu (Borica)</a>
           </div>
         </div>
       </div>

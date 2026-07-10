@@ -1,37 +1,25 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Contents from './components/Contents';
-import Project1 from './components/Project1';
-import Project2 from './components/Project2';
-import Project3 from './components/Project3';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+﻿import React from 'react';
+import AboutMe from './components/AboutMe/AboutMe';
+import Experience from './components/Experience/Exprience';
+import Contents from './components/Contents/Contents';
+import { Music } from 'lucide-react';
+import MusicVideoProject from './components/MusicVideo/MusicVideoProject';
+import Hero from './components/Hero/Hero';
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <div className="app-wrapper">
-        {/* Landing + Work Experience Timeline */}
-        <Hero />
-
-        {/* Behance-Style Directory contents */}
-        <Contents />
-
-        {/* Case Studies */}
-        <Project1 />
-        <Project2 />
-        <Project3 />
-
-        {/* Contact Form */}
-        <Contact />
-
-        {/* Footer */}
-        <Footer />
-      </div>
-    </>
+    <main className="portfolio-container">
+      <Hero />
+      <img
+        className="welcome-image"
+        src="/welcome.png"
+        alt="Welcome text layout"
+      />
+      <AboutMe />
+      <Experience />
+      <Contents />
+      <MusicVideoProject />
+    </main>
   );
 }
-
 export default App;

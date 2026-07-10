@@ -1,0 +1,247 @@
+.mv-project-section {
+    background-color: #000000;
+    color: #ffffff;
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Kiềm chế banner trên cùng sắc nét tràn viền */
+.mv-banner {
+    width: 100%;
+    display: block;
+}
+
+.mv-banner-img {
+    width: 100vw;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Thùng chứa toàn bộ nội dung dưới banner */
+.mv-content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    box-sizing: border-box;
+}
+
+/* --- Khối Intro --- */
+.mv-intro-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+    margin-bottom: 80px;
+}
+
+.mv-cover-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.mv-category {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #a0a0a0;
+    display: block;
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+.mv-project-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0 0 20px 0;
+    letter-spacing: 0.5px;
+}
+
+.mv-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.mv-tag {
+    border: 1px solid #ffffff;
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.mv-description p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #cccccc;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.mv-description strong {
+    color: #ffffff;
+}
+
+.mv-clients {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.client-label {
+    font-size: 0.85rem;
+    color: #888888;
+}
+
+.client-tag {
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+}
+
+.client-tag.outline-orange {
+    border-color: #ff4500;
+    color: #ff4500;
+}
+
+/* --- Các tiêu đề phân đoạn phụ --- */
+.mv-section-block {
+    margin-bottom: 80px;
+}
+
+.mv-sub-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+/* --- Lưới Storyboard (4 Cột) --- */
+.storyboard-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.sb-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2px;
+}
+
+/* --- Bố cục Photoshoot (Ảnh giữa to lớn) --- */
+.photoshoot-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.ps-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ps-item.side {
+    flex: 1;
+    /* Các ảnh bên cạnh tự co giãn bằng nhau */
+}
+
+.ps-item.center {
+    flex: 1.4;
+    /* Ảnh ở giữa chiếm tỷ lệ lớn hơn hẳn */
+    z-index: 2;
+}
+
+/* --- Responsive thiết bị di động --- */
+@media (max-width: 900px) {
+    .mv-intro-block {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .storyboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 cột trên tablet/mobile */
+    }
+
+    .photoshoot-flex {
+        flex-wrap: wrap;
+        /* Cho phép rớt hàng trên màn hình bé */
+        gap: 10px;
+    }
+
+    .ps-item.side,
+    .ps-item.center {
+        flex: calc(50% - 10px);
+        /* Chia đôi trên mobile */
+    }
+}
+
+/* --- Khung bọc video responsive tỷ lệ 16:9 --- */
+.video-responsive-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* Tỷ lệ vàng 16:9 (9 / 16 * 100) */
+    height: 0;
+    overflow: hidden;
+    border-radius: 4px;
+    /* Bo góc nhẹ cho tiệp với layout */
+}
+
+.video-responsive-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Khung bọc chữ tiêu đề */
+.mv-banner-text-wrapper {
+    width: 100%;
+    display: flex;
+    /* Sử dụng Flexbox để căn giữa */
+    justify-content: center;
+    /* Căn giữa theo chiều ngang màn hình */
+    align-items: center;
+    /* Căn giữa theo chiều dọc nếu có khoảng cao */
+    margin: 0 auto;
+    padding: 60px 40px 20px 40px;
+    box-sizing: border-box;
+}
+
+/* Áp dụng font nghệ thuật và căn chữ ra giữa */
+.mv-text-title-script {
+    font-family: 'Alex Brush', cursive;
+    font-size: 6.5rem;
+    color: #ff4500;
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-align: center;
+    /* Đảm bảo text luôn cân xứng ở chính giữa */
+}
+
+/* Responsive cho điện thoại */
+@media (max-width: 768px) {
+    .mv-text-title-script {
+        font-size: 4.5rem;
+    }
+}
