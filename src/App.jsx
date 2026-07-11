@@ -10,7 +10,7 @@ import EventProjects from './components/EventProjects/EventProjects';
 import SocialAssetsProject from './components/SocialAssetsProject/SocialAssetsProject';
 import PrintingProject from './components/PrintingProject/PrintingProject';
 import MotionGraphicProject from './components/MotionGraphicProject/MotionGraphicProject';
-import ThankYou from './components/Thankyou/Thankyou';
+import ThankYou from './components/ThankYou/ThankYou';
 
 function App() {
   return (
