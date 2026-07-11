@@ -1,9 +1,10 @@
 ﻿import React from 'react';
 import AboutMe from './components/AboutMe/AboutMe';
-import Experience from './components/Experience/Exprience';
+import Experience from './components/Experience/Experience';
 import Contents from './components/Contents/Contents';
-import MusicVideoProject from './components/MusicVideo/MusicVideoProject';
 import Hero from './components/Hero/Hero';
+
+import MusicVideoProject from './components/MusicVideo/MusicVideoProject';
 import CampaignProjects from './components/Campaign/CampaignProjects';
 import EventProjects from './components/EventProjects/EventProjects';
 import SocialAssetsProject from './components/SocialAssetsProject/SocialAssetsProject';
@@ -25,7 +26,7 @@ function App() {
       <Contents />
       <MusicVideoProject />
       <CampaignProjects />
-      <EventProjects   />
+      <EventProjects />
       <SocialAssetsProject />
       <PrintingProject />
       <MotionGraphicProject />
@@ -33,4 +34,5 @@ function App() {
     </main>
   );
 }
+
 export default App;
