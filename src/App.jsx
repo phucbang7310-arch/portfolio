@@ -18,7 +18,7 @@ function App() {
       <img
         className="welcome-image"
         src="/welcome.png"
-        alt="Welcome text layout"
+        alt="Welcome text layout" 
       />
       <AboutMe />
       <Experience />
