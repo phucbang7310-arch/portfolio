@@ -1,0 +1,71 @@
+/* --- Khối Adapt 9x16 & 1x1 --- */
+.adapt-size-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    /* Cột chứa ảnh vuông rộng hơn một chút */
+    gap: 24px;
+    align-items: end;
+    /* Căn cho đáy 2 ảnh bằng nhau */
+}
+
+.adapt-item {
+    width: 100%;
+    overflow: hidden;
+    background-color: #111;
+}
+
+.adapt-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Khung phát video TVC tỉ lệ 16:9 --- */
+.camp-video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* Khung hình tỷ lệ 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: #000;
+}
+
+.camp-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* --- Khối nội dung Multi Post --- */
+.multipost-wrapper {
+    width: 100%;
+    display: block;
+}
+
+.full-width-post-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Khối Microsite --- */
+.microsite-wrapper {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    /* Bo góc nhẹ cho giống giao diện UI web */
+}
+
+/* --- Responsive tối ưu thêm --- */
+@media (max-width: 768px) {
+    .adapt-size-grid {
+        grid-template-columns: 1fr;
+        /* Rớt thành 1 cột xếp chồng dọc trên di động */
+        gap: 20px;
+    }
+}

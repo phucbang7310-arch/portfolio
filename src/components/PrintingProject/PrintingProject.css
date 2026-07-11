@@ -1,0 +1,187 @@
+.print-project-section {
+    background-color: #000000;
+    color: #ffffff;
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* --- Khung bọc tiêu đề chữ uốn lượn nghệ thuật giống các phần trước --- */
+.print-banner-text-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* Căn giữa chữ ra giữa màn */
+    align-items: center;
+    margin: 0 auto;
+    padding: 60px 40px 20px 40px;
+    box-sizing: border-box;
+}
+
+.print-text-title-script {
+    font-family: 'Alex Brush', cursive;
+    font-size: 6.5rem;
+    color: #ff4500;
+    /* Màu cam chủ đạo nhất quán toàn web */
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Thùng chứa phần nội dung bên dưới */
+.print-content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px 100px 40px;
+    box-sizing: border-box;
+}
+
+/* --- Khối Intro 2 cột --- */
+.print-intro-block {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    align-items: start;
+    margin-bottom: 80px;
+}
+
+.print-brand-logo-wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.print-brand-logo-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.print-category {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #a0a0a0;
+    display: block;
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+.print-project-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0 0 20px 0;
+    letter-spacing: 0.5px;
+}
+
+.print-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.print-tag {
+    border: 1px solid #ffffff;
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.print-description p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #cccccc;
+    margin: 0;
+    font-weight: 300;
+}
+
+/* --- Tiêu đề phân đoạn phụ (Magazine) --- */
+.print-section-block {
+    margin-bottom: 80px;
+}
+
+.print-sub-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+/* --- Hệ thống lưới trưng bày Tạp chí mượt mà --- */
+.magazine-display-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    /* Tạo khoảng hở đen mảnh giữa các cụm ảnh như bản thiết kế */
+}
+
+.mag-row-full {
+    width: 100%;
+}
+
+.mag-row-full img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Cụm lưới phối hợp ở đáy */
+.mag-bottom-mix-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Chia đôi trái phải bằng nhau */
+    gap: 24px;
+}
+
+.mag-mix-left {
+    width: 100%;
+}
+
+.mag-mix-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ép ảnh poster MONO lấp đầy chiều cao đứng */
+    display: block;
+}
+
+.mag-mix-right {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.mag-mix-right img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Responsive thiết bị di động --- */
+@media (max-width: 900px) {
+    .print-text-title-script {
+        font-size: 4.5rem;
+    }
+
+    .print-intro-block {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .mag-bottom-mix-grid {
+        grid-template-columns: 1fr;
+        /* Rớt về 1 cột dọc trên di động */
+        gap: 20px;
+    }
+
+    .mag-mix-right {
+        gap: 20px;
+    }
+}

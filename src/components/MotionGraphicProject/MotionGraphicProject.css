@@ -1,0 +1,208 @@
+.mg-project-section {
+    background-color: #000000;
+    color: #ffffff;
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* --- Khung bọc tiêu đề chữ uốn lượn nghệ thuật giống các phần trước --- */
+.mg-banner-text-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* Căn giữa chữ ra giữa màn */
+    align-items: center;
+    margin: 0 auto;
+    padding: 60px 40px 20px 40px;
+    box-sizing: border-box;
+}
+
+.mg-text-title-script {
+    font-family: 'Alex Brush', cursive;
+    font-size: 6.5rem;
+    color: #ff4500;
+    /* Màu cam neon nhất quán toàn web */
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Thùng chứa phần nội dung bên dưới */
+.mg-content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px 100px 40px;
+    box-sizing: border-box;
+}
+
+/* --- Khối Intro 2 cột --- */
+.mg-intro-block {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    align-items: start;
+    margin-bottom: 80px;
+}
+
+.mg-brand-logo-wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.mg-brand-logo-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.mg-category {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #a0a0a0;
+    display: block;
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+.mg-project-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0 0 20px 0;
+    letter-spacing: 0.5px;
+}
+
+.mg-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.mg-tag {
+    border: 1px solid #ffffff;
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.mg-description p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #cccccc;
+    margin: 0;
+    font-weight: 300;
+}
+
+/* --- Tiêu đề các phân đoạn phụ --- */
+.mg-section-block {
+    margin-bottom: 80px;
+}
+
+.mg-sub-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+/* --- Lưới Storyboard & Design (4 Cột đều nhau) --- */
+.mg-storyboard-grid,
+.mg-design-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.mg-sb-item img,
+.mg-ds-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2px;
+}
+
+/* --- Khối Mockup Laptop (Ảnh giữa to nổi bật) --- */
+.mg-laptop-mockup-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.mg-laptop-mockup-row .laptop-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.mg-laptop-mockup-row .laptop-item.side {
+    flex: 1;
+    /* Hai máy bên cạnh tự động co giãn bằng nhau */
+}
+
+.mg-laptop-mockup-row .laptop-item.center {
+    flex: 1.4;
+    /* Máy ở giữa chiếm tỷ lệ lớn hơn và tạo điểm nhấn */
+    z-index: 2;
+}
+
+/* --- Khung responsive phát Video Ads tỷ lệ vàng 16:9 --- */
+.mg-video-responsive-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: #000;
+}
+
+.mg-video-responsive-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* --- Responsive trên các thiết bị màn hình nhỏ --- */
+@media (max-width: 900px) {
+    .mg-text-title-script {
+        font-size: 4.5rem;
+    }
+
+    .mg-intro-block {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .mg-storyboard-grid,
+    .mg-design-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Thu gọn thành 2 cột trên di động */
+        gap: 12px;
+    }
+
+    .mg-laptop-mockup-row {
+        flex-wrap: wrap;
+        /* Cho phép rớt dòng trên màn hình bé */
+        gap: 12px;
+    }
+
+    .mg-laptop-mockup-row .laptop-item.side,
+    .mg-laptop-mockup-row .laptop-item.center {
+        flex: calc(50% - 12px);
+        /* Chia đôi màn hình */
+    }
+}

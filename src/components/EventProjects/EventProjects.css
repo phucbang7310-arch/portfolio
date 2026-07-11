@@ -1,0 +1,281 @@
+.event-section {
+    background-color: #000000;
+    color: #ffffff;
+    width: 100%;
+    display: block;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Căn chữ tiêu đề Event lớn ra chính giữa */
+.event-main-title-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 40px 20px 40px;
+    box-sizing: border-box;
+}
+
+.event-main-title-script {
+    font-family: 'Alex Brush', cursive;
+    font-size: 6.5rem;
+    color: #ff4500;
+    margin: 0;
+    font-weight: 400;
+    text-align: center;
+}
+
+.event-content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 40px 100px 40px;
+    box-sizing: border-box;
+}
+
+.event-project-card {
+    margin-bottom: 100px;
+}
+
+/* --- Khối Intro dự án con --- */
+.event-intro-block {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    margin-bottom: 60px;
+    align-items: start;
+}
+
+.event-logo-box {
+    width: 100%;
+    height: 220px;
+    background-color: #ffffff;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.event-category-label {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #a0a0a0;
+    display: block;
+    text-align: right;
+}
+
+.event-project-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 5px 0 20px 0;
+}
+
+.event-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.event-tag {
+    border: 1px solid #ffffff;
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.event-description p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #cccccc;
+    font-weight: 300;
+}
+
+.event-clients {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.ev-client-label {
+    font-size: 0.85rem;
+    color: #888888;
+}
+
+.ev-client-tag {
+    font-size: 0.85rem;
+    font-weight: 700;
+    border: 1px solid #ffffff;
+    padding: 4px 12px;
+    border-radius: 15px;
+}
+
+.event-sub-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* ==========================================================
+   CẤU TRÚC LAYOUT HÌNH ẢNH CHI TIẾT CỦA TỪNG DỰ ÁN
+============================================================= */
+
+/* --- 1. SAWACO LAYOUT --- */
+.sawaco-grid-structure {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: #080808;
+    padding: 24px;
+    border: 1px solid #222;
+}
+
+.sawaco-main-render,
+.sawaco-bottom-photo {
+    width: 100%;
+    height: auto;
+}
+
+.sawaco-triple-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.sawaco-triple-row img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* --- 2. VCS LAYOUT --- */
+.vcs-flex-structure {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.vcs-dark-options-bar {
+    background-color: #111;
+    border-top: 4px solid #ff4500;
+    /* Thanh cam thương hiệu */
+    padding: 20px;
+}
+
+.vcs-dark-options-bar .bar-title {
+    font-size: 0.8rem;
+    color: #ff4500;
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.vcs-dark-options-bar img {
+    width: 100%;
+    height: auto;
+}
+
+.vcs-kv-large {
+    width: 100%;
+    height: auto;
+}
+
+/* --- 3. HEALARA LAYOUT --- */
+.healara-grid-structure {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background: #0a0a0a;
+    padding: 30px;
+    border: 1px solid #1a1a1a;
+}
+
+.healara-top-center {
+    display: flex;
+    justify-content: center;
+}
+
+.healara-top-center img {
+    max-width: 80%;
+    height: auto;
+}
+
+.healara-bottom-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.healara-bottom-row img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* --- 4. TIKTOK LAYOUT (3 Điện thoại song song) --- */
+.tiktok-phone-mockup-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: #0d0d0d;
+    padding: 40px 20px;
+    border: 1px solid #222;
+}
+
+.tiktok-phone-mockup-row img {
+    height: auto;
+    display: block;
+}
+
+.tiktok-phone-mockup-row .phone-side {
+    flex: 1;
+    max-width: 25%;
+}
+
+.tiktok-phone-mockup-row .phone-center {
+    flex: 1.2;
+    max-width: 30%;
+    z-index: 2;
+    box-shadow: 0 0 30px rgba(0, 242, 234, 0.2);
+    /* Hiệu ứng neon mờ kiểu TikTok */
+}
+
+/* Thanh phân cách giữa các dự án lớn */
+.project-separator {
+    border: none;
+    border-top: 1px dashed #333;
+    margin-top: 80px;
+}
+
+/* --- RESPONSIVE DI ĐỘNG --- */
+@media (max-width: 900px) {
+    .event-main-title-script {
+        font-size: 4.5rem;
+    }
+
+    .event-intro-block {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .sawaco-triple-row,
+    .healara-bottom-row {
+        grid-template-columns: 1fr;
+        /* Rớt hàng dọc trên mobile */
+    }
+
+    .tiktok-phone-mockup-row {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .tiktok-phone-mockup-row .phone-side,
+    .tiktok-phone-mockup-row .phone-center {
+        max-width: 70%;
+    }
+}
