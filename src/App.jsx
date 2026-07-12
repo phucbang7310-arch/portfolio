@@ -17,7 +17,7 @@ function App() {
     <main className="portfolio-container">
       <Hero />
       <img
-        className="welcome-image"
+        className="welcome-image" 
         src="/welcome.png"
         alt="Welcome text layout" 
       />
