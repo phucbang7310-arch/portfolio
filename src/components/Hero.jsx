@@ -9,7 +9,7 @@ const Hero = () => (
       <div className="hero-cover-overlay" />
 
       {/* top bar */}
-      <div className="hero-topbar">
+      <div className="hero-topbar"> 
         <span className="hero-topbar-name">BORICA</span>
         <span className="hero-topbar-divider" />
         <span className="hero-topbar-role">CREATIVE DESIGNER</span>
