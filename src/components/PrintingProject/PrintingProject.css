@@ -22,15 +22,15 @@
 }
 
 .print-text-title-script {
-    font-family: 'Alex Brush', cursive;
+    font-family: 'DFVN Radja Lover', sans-serif;
     font-size: 6.5rem;
-    color: #ff4500;
-    /* Màu cam chủ đạo nhất quán toàn web */
+    color: #ffd600;
     margin: 0;
     font-weight: 400;
     line-height: 1.1;
     letter-spacing: 1px;
     text-align: center;
+    text-shadow: none;
 }
 
 /* Thùng chứa phần nội dung bên dưới */

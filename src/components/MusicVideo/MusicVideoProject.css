@@ -110,8 +110,10 @@
 }
 
 .client-tag.outline-orange {
-    border-color: #ff4500;
-    color: #ff4500;
+    font-family: 'DFVN Radja Lover', sans-serif;
+    border-color: #ffd600;
+    color: #ffd600;
+    text-shadow: none;
 }
 
 /* --- Các tiêu đề phân đoạn phụ --- */
@@ -228,15 +230,15 @@
 
 /* Áp dụng font nghệ thuật và căn chữ ra giữa */
 .mv-text-title-script {
-    font-family: 'Alex Brush', cursive;
+    font-family: 'DFVN Radja Lover', sans-serif;
     font-size: 6.5rem;
-    color: #ff4500;
+    color: #ffd600;
     margin: 0;
     font-weight: 400;
     line-height: 1.1;
     letter-spacing: 1px;
     text-align: center;
-    /* Đảm bảo text luôn cân xứng ở chính giữa */
+    text-shadow: none;
 }
 
 /* Responsive cho điện thoại */

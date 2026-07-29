@@ -16,21 +16,23 @@
 
 /* Tiêu đề "Work experience" với chữ Work uốn lượn nghệ thuật */
 .exp-title {
+    font-family: 'DFVN Radja Lover', sans-serif;
     font-size: 3.5rem;
     font-weight: 400;
-    color: #ff4500;
-    /* Màu cam chủ đạo */
+    color: #ffd600;
     margin-bottom: 40px;
+    text-shadow: none;
 }
 
 /* Biến chữ "Work" đầu tiên thành font nghệ thuật bằng pseudo-element nếu muốn, 
    hoặc để đơn giản cấu trúc, ở đây ta áp dụng font lồng ghép */
 .exp-title::first-letter {
-    font-family: 'Alex Brush', cursive;
+    font-family: 'DFVN Radja Lover', sans-serif;
     font-size: 6rem;
-    color: #ff4500;
+    color: #ffd600;
     padding-right: 10px;
     line-height: 0;
+    text-shadow: none;
 }
 
 /* Vùng chứa ảnh timeline */

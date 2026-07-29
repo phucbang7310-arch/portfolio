@@ -42,16 +42,16 @@
     flex-direction: column;
 }
 
-/* Font chữ Xin Chào nghệ thuật màu cam */
+/* Font chữ Xin Chào nghệ thuật màu vàng */
 .greeting-text {
-    font-family: 'Alex Brush', cursive;
+    font-family: 'DFVN Radja Lover', sans-serif;
     font-size: 6.5rem;
     /* To, uốn lượn mềm mại */
-    color: #ff4500;
-    /* Màu cam neon nguyên bản */
+    color: #ffd600;
     margin: 0 0 20px 0;
     font-weight: 400;
     line-height: 1;
+    text-shadow: none;
 }
 
 /* Đoạn văn giới thiệu */
@@ -101,7 +101,7 @@
 
 /* Icon dạng vuông (Ps, Ai, Id...) */
 .tool-icon {
-    background-color: #ff4500;
+    background-color: #ffd600;
     color: #000000;
     font-weight: 700;
     font-size: 0.75rem;
@@ -115,7 +115,7 @@
 
 /* Icon dạng tròn (Figma, AI Generator...) */
 .tool-icon-round {
-    background-color: #ff4500;
+    background-color: #ffd600;
     color: #000000;
     font-weight: 700;
     font-size: 0.7rem;
@@ -145,15 +145,16 @@
 }
 
 .greeting-text {
-    font-family: 'Alex Brush', cursive;
+    font-family: 'DFVN Radja Lover', sans-serif;
     font-size: 6.5rem;
-    color: #ff4500;
+    color: #ffd600;
     margin: 0 0 20px 0;
     /* Đảm bảo margin-top bằng 0 */
     padding-top: 0;
     /* Triệt tiêu padding nếu có */
     font-weight: 400;
     line-height: 1;
+    text-shadow: none;
 }
 
 /* Responsive cho màn hình điện thoại */

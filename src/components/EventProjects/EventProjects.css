@@ -18,12 +18,13 @@
 }
 
 .event-main-title-script {
-    font-family: 'Alex Brush', cursive;
+    font-family: 'DFVN Radja Lover', sans-serif;
     font-size: 6.5rem;
-    color: #ff4500;
+    color: #ffd600;
     margin: 0;
     font-weight: 400;
     text-align: center;
+    text-shadow: none;
 }
 
 .event-content-container {
@@ -161,17 +162,19 @@
 
 .vcs-dark-options-bar {
     background-color: #111;
-    border-top: 4px solid #ff4500;
-    /* Thanh cam thương hiệu */
+    border-top: 4px solid #ffd600;
+    /* Thanh vàng thương hiệu */
     padding: 20px;
 }
 
 .vcs-dark-options-bar .bar-title {
+    font-family: 'DFVN Radja Lover', sans-serif;
     font-size: 0.8rem;
-    color: #ff4500;
+    color: #ffd600;
     display: block;
     margin-bottom: 15px;
     font-weight: bold;
+    text-shadow: none;
 }
 
 .vcs-dark-options-bar img {
