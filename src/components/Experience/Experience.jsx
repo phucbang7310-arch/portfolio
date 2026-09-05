@@ -15,6 +15,7 @@ function Experience() {
             src="/timeline.png" /* Thay đường dẫn ảnh timeline bạn đã cắt ở đây */
             alt="Experience Timeline" 
             className="timeline-graphics"
+            onError={(e) => { e.currentTarget.style.display = 'none'; }}
           />
         </div>
 
@@ -24,31 +25,37 @@ function Experience() {
           {/* CỘT TRÁI */}
           <div className="exp-column">
             
-            {/* Công việc 1 */}
+            {/* Công việc 1: Freelancer */}
             <div className="exp-item">
-              <span className="exp-date">/11.2025 - Now/</span>
-              <h2 className="exp-company">Biz-Eyes Agency — <span className="exp-role">Creative Designer</span></h2>
-              <p className="exp-desc">
-                Biz-Eyes is an IMC agency in Vietnam, specializing in PR, content, social media, and digital marketing campaigns
-              </p>
+              <span className="exp-date">(06/2024 - Nay)</span>
+              <h2 className="exp-company">Freelancer</h2>
               <ul className="exp-bullets">
-                <li>Collaborate with the concept team to brainstorm ideas and edit copy, ensuring that the visuals align with the message</li>
-                <li>Create key visuals and design assets for PR, social media, and digital marketing campaigns</li>
-                <li>Execute design adaptations and production-ready assets across multiple channels while maintaining visual consistency</li>
+                <li>Videographer và editor cho 1 số thương hiệu như: Hapas, Mate Made, Uyển Vũ, Quán Cóc,...</li>
+                <li>Photographer và Assistant cho 1 số campaign</li>
+                <li>Làm Assistant Director và Assistant Production cho các dự án TVC và video quảng cáo,...</li>
+                <li>Lên ý tưởng và setup các bộ ảnh private cá nhân</li>
+                <li>Trợ lý KOLs</li>
               </ul>
             </div>
 
-            {/* Công việc 2 */}
+            {/* Công việc 2: Filmciti Production House */}
             <div className="exp-item">
-              <span className="exp-date">/01.2025 - 11.2025/</span>
-              <h2 className="exp-company">InBold Agency — <span className="exp-role">Mid Level Designer</span></h2>
-              <p className="exp-desc">
-                InBold Agency is a Denmark-based creative agency
-              </p>
+              <span className="exp-date">(05/2024 - 01/2025)</span>
+              <h2 className="exp-company">Filmciti Production House</h2>
               <ul className="exp-bullets">
-                <li>Designed advertising content for social media platforms as well as various printed POSM materials</li>
-                <li>Create guidelines/tutorials and train team members to use automatic tools (AI, script, action, extension, plugin, etc.)</li>
-                <li>Regularly updated new guideline and new QC checklist assigned by superiors</li>
+                <li>Biên tập viên tiktok</li>
+                <li>Project Manager cho 1 số dự án tiktok cá nhân</li>
+                <li>Assistant Production cho một vài dự án TVC và video</li>
+              </ul>
+            </div>
+
+            {/* Công việc 3: Công ty Cổ phần DCCR */}
+            <div className="exp-item">
+              <span className="exp-date">(02/2023 - 08/2023)</span>
+              <h2 className="exp-company">Công ty Cổ phần DCCR</h2>
+              <ul className="exp-bullets">
+                <li>Thiết kế sản phẩm truyền thông, marketing,...</li>
+                <li>Quay và edit video tiktok</li>
               </ul>
             </div>
 
@@ -57,31 +64,31 @@ function Experience() {
           {/* CỘT PHẢI */}
           <div className="exp-column">
             
-            {/* Công việc 3 */}
+            {/* Công việc 4: Multimedia */}
             <div className="exp-item">
-              <span className="exp-date">/2022 - Now/</span>
-              <h2 className="exp-company">Freelancer</h2>
-              <p className="exp-desc">
-                Freelancer for agencies: Publicis Groupe Vietnam, VNGames, Zee Agency, and large businesses in Vietnam
-              </p>
+              <span className="exp-date">(08/2022 - 01/2023)</span>
+              <h2 className="exp-company">Multimedia</h2>
               <ul className="exp-bullets">
-                <li>Design the visual identity system and key visuals for events under the supervision of the Art Director from the agency</li>
-                <li>Work directly with marketing department heads to design a system of printed materials and communication assets</li>
-                <li>Consult, advise, and design logos, printed materials, and brand identity systems for business owners in Vietnam</li>
+                <li>Hỗ trợ đón tiếp, điều phối và chăm sóc khách mời, đối tác trong suốt quá trình diễn ra sự kiện Aquafina Vietnam International Fashion Week từ năm 2022 - 2025</li>
+                <li>Biên tập video highlight và nội dung truyền thông</li>
               </ul>
             </div>
 
-            {/* Công việc 4 */}
+            {/* Công việc 5: Công ty TNHH TM&DV Wing Group */}
             <div className="exp-item">
-              <span className="exp-date">/10.2023 - 12.2024/</span>
-              <h2 className="exp-company">One Tech Medical — <span className="exp-role">Multimedia Designer</span></h2>
-              <p className="exp-desc">
-                Exclusive distributor of Neova, md:ceuticals, and Skinfill in Vietnam
-              </p>
+              <span className="exp-date">(04/2022 - 08/2022)</span>
+              <h2 className="exp-company">Công ty TNHH TM&DV Wing Group</h2>
               <ul className="exp-bullets">
-                <li>Create visuals for marketing campaigns such as posters, standees, backdrops, and most other important POSM</li>
-                <li>Design advertising content for social media platforms such as Facebook, Instagram, TikTok, and YouTube</li>
-                <li>Design motion graphics for advertisements and edit videos for KOLs, including Dermatologists and Aesthetic Surgeons</li>
+                <li>Thiết kế banner, ấn phẩm cho các cửa hàng trên sàn thương mại điện tử như: Lazada, Shopee,...</li>
+              </ul>
+            </div>
+
+            {/* Công việc 6: Kel Agency */}
+            <div className="exp-item">
+              <span className="exp-date">(01/2022 - 03/2022)</span>
+              <h2 className="exp-company">Kel Agency</h2>
+              <ul className="exp-bullets">
+                <li>Thiết kế ấn phẩm truyền thông, poster, banner,...</li>
               </ul>
             </div>
 

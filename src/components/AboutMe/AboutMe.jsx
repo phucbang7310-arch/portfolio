@@ -21,16 +21,16 @@ function AboutMe() {
           
           <div className="bio-text">
             <p>
-              I am <strong>Trung Hậu, aka Borica</strong>, a Creative Designer with over two years of 
-              professional experience as a freelance designer, working with both large 
-              and small agencies. Recently, I have been working at Biz-Eyes Agency, 
-              which specializes in providing creative services to clients in Vietnam.
+              Tôi là <strong>Anh Thơ</strong>, <strong>Creative Media Freelancer</strong>, tập trung vào truyền thông sáng tạo và đặc biệt là truyền thông hình ảnh. Tôi từng có cơ hội làm việc tại các công ty và agency chuyên cung cấp dịch vụ sáng tạo, qua đó được tiếp cận với nhiều dự án, khách hàng và môi trường làm việc khác nhau.
             </p>
             <p>
-              To me, coming up with ideas is important, but it is equally essential to 
-              balance creativity with a structured process. I see myself as a designer 
-              who loves telling stories—using visuals not just to decorate, but to 
-              communicate meaning and connect with people.
+              Xuất phát điểm từ lĩnh vực <strong>Graphic Design</strong>, tôi luôn duy trì tinh thần chủ động học hỏi và sẵn sàng mở rộng phạm vi chuyên môn. Khả năng thích ứng nhanh giúp tôi có cơ hội trải nghiệm nhiều vai trò khác nhau trong lĩnh vực truyền thông và sản xuất nội dung, từ <strong>Photographer</strong>, <strong>Designer</strong>, <strong>TikTok Editor</strong> đến quản lý và phát triển nội dung trên các nền tảng mạng xã hội như TikTok và Facebook.
+            </p>
+            <p>
+              Trong hơn một năm gần đây, tôi tập trung làm việc trong môi trường <strong>Production House</strong>, có cơ hội tham gia sâu hơn vào quy trình sản xuất và phát triển ý tưởng. Hiện tại, với vai trò <strong>Freelancer</strong>, tôi tham gia ở nhiều vị trí như <strong>Photographer</strong>, <strong>Assistant Director</strong>, <strong>Production Assistant</strong> và <strong>Creative Concept</strong>, tùy theo yêu cầu và đặc thù của từng dự án.
+            </p>
+            <p>
+              Với nền tảng đa lĩnh vực cùng khả năng thích nghi và kết nối các khâu trong quá trình sáng tạo, tôi hướng đến việc tạo ra những sản phẩm hình ảnh vừa có tính thẩm mỹ, vừa truyền tải rõ ràng tinh thần và câu chuyện của dự án.
             </p>
           </div>
 
