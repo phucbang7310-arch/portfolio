@@ -17,7 +17,7 @@ function AboutMe() {
 
         {/* Khối bên phải: Nội dung Text & Icons */}
         <div className="about-right">
-          <h1 className="greeting-text">Xin chào!</h1>
+          <h1 className="greeting-text">Hello!</h1>
           
           <div className="bio-text">
             <p>
@@ -27,7 +27,7 @@ function AboutMe() {
               Xuất phát điểm từ lĩnh vực <strong>Graphic Design</strong>, tôi luôn duy trì tinh thần chủ động học hỏi và sẵn sàng mở rộng phạm vi chuyên môn. Khả năng thích ứng nhanh giúp tôi có cơ hội trải nghiệm nhiều vai trò khác nhau trong lĩnh vực truyền thông và sản xuất nội dung, từ <strong>Photographer</strong>, <strong>Designer</strong>, <strong>TikTok Editor</strong> đến quản lý và phát triển nội dung trên các nền tảng mạng xã hội như TikTok và Facebook.
             </p>
             <p>
-              Trong hơn một năm gần đây, tôi tập trung làm việc trong môi trường <strong>Production House</strong>, có cơ hội tham gia sâu hơn vào quy trình sản xuất và phát triển ý tưởng. Hiện tại, với vai trò <strong>Freelancer</strong>, tôi tham gia ở nhiều vị trí như <strong>Photographer</strong>, <strong>Assistant Director</strong>, <strong>Production Assistant</strong> và <strong>Creative Concept</strong>, tùy theo yêu cầu và đặc thù của từng dự án.
+              Trong hơn một năm gần đây, tôi tập trung làm việc trong môi trường <strong>Production House</strong>, có cơ hội tham gia sâu hơn vào quy trình sản xuất và phát triển ý tưởng. Hiện tại, với vai trò <strong>Freelancer</strong>, tôi tham gia ở nhiều vị trí như <strong>Photographer</strong>, <strong>Director Assistant</strong>, <strong>Production Assistant</strong> và <strong>Creative Concept</strong>, tùy theo yêu cầu và đặc thù của từng dự án.
             </p>
             <p>
               Với nền tảng đa lĩnh vực cùng khả năng thích nghi và kết nối các khâu trong quá trình sáng tạo, tôi hướng đến việc tạo ra những sản phẩm hình ảnh vừa có tính thẩm mỹ, vừa truyền tải rõ ràng tinh thần và câu chuyện của dự án.
@@ -41,25 +41,10 @@ function AboutMe() {
             <div className="tool-column">
               <h3>Design Tools:</h3>
               <div className="icon-group">
-                {/* Thay thế chữ bằng icon thật hoặc ảnh vuông màu cam nếu cần */}
                 <span className="tool-icon">Ps</span>
                 <span className="tool-icon">Ai</span>
-                <span className="tool-icon">Id</span>
+                <span className="tool-icon">Pr</span>
                 <span className="tool-icon">Ae</span>
-                <span className="tool-icon">Dn</span>
-                <span className="tool-icon-round">F</span>
-              </div>
-            </div>
-            
-            <div className="tool-column">
-              <h3>AI Generator:</h3>
-              <div className="icon-group">
-                <span className="tool-icon-round">MJ</span>
-                <span className="tool-icon-round">F</span>
-                <span className="tool-icon-round">~</span>
-                <span className="tool-icon-round">✦</span>
-                <span className="tool-icon-round">L</span>
-                <span className="tool-icon-round">GPT</span>
               </div>
             </div>
           </div>

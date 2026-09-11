@@ -3,12 +3,12 @@ import './Contents.css';
 
 function Contents() {
   const items = [
-    { id: '01', title: 'Music Video' },
-    { id: '02', title: 'Campaign' },
-    { id: '03', title: 'Event' },
-    { id: '04', title: 'Social Assets' },
-    { id: '05', title: 'Printing' },
-    { id: '06', title: 'Motion Graphic' },
+    { id: '01', title: 'Production Assistant' },
+    { id: '02', title: 'Photographer' },
+    { id: '03', title: 'Creative Concept' },
+    { id: '04', title: 'Videography' },
+    { id: '05', title: 'Editor' },
+    { id: '06', title: 'Project Manager' },
   ];
 
   return (

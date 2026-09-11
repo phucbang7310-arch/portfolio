@@ -32,8 +32,8 @@ function Experience() {
               <ul className="exp-bullets">
                 <li>Videographer và editor cho 1 số thương hiệu như: Hapas, Mate Made, Uyển Vũ, Quán Cóc,...</li>
                 <li>Photographer và Assistant cho 1 số campaign</li>
-                <li>Làm Assistant Director và Assistant Production cho các dự án TVC và video quảng cáo,...</li>
-                <li>Lên ý tưởng và setup các bộ ảnh private cá nhân</li>
+                <li>Làm Director Assistant và Production Assistant cho các dự án TVC và video quảng cáo,...</li>
+                <li>Creative Concept cho các bộ ảnh private cá nhân</li>
                 <li>Trợ lý KOLs</li>
               </ul>
             </div>
@@ -45,7 +45,7 @@ function Experience() {
               <ul className="exp-bullets">
                 <li>Biên tập viên tiktok</li>
                 <li>Project Manager cho 1 số dự án tiktok cá nhân</li>
-                <li>Assistant Production cho một vài dự án TVC và video</li>
+                <li>Production Assistant cho một vài dự án TVC và video</li>
               </ul>
             </div>
 
