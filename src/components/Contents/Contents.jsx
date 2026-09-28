@@ -3,10 +3,10 @@ import './Contents.css';
 
 function Contents() {
   const items = [
-    { id: '01', title: 'Production Assistant' },
-    { id: '02', title: 'Photographer' },
+    { id: '01', title: 'Photographer' },
+    { id: '02', title: 'Videographer' },
     { id: '03', title: 'Creative Concept' },
-    { id: '04', title: 'Videography' },
+    { id: '04', title: 'Production Assistant' },
     { id: '05', title: 'Editor' },
     { id: '06', title: 'Project Manager' },
   ];
