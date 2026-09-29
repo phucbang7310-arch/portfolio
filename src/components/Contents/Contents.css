@@ -11,14 +11,16 @@
 .contents-banner {
     width: 100%;
     display: block;
-    min-height: 50px;
-    /* Đảm bảo có khoảng không gian nếu chưa có ảnh */
+    margin: 0;
+    padding: 0;
 }
 
 .banner-img {
     width: 100%;
     height: auto;
     display: block;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 }
 
 .contents-grid-container {

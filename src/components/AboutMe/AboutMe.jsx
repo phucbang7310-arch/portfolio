@@ -6,18 +6,18 @@ function AboutMe() {
     <section className="about-section">
       <div className="about-container">
         
-        {/* Khối bên trái: Ảnh Mockup Hộp sữa */}
+        {/* Khối bên trái: Ảnh đại diện / About me */}
         <div className="about-left">
           <img 
-            src="https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?q=80&w=1000" /* Bạn thay bằng link ảnh hộp sữa của bạn ở đây */
-            alt="Creative Milk Carton Mockup" 
+            src="/about_me.png"
+            alt="Anh Thơ - About Me" 
             className="mockup-image"
           />
         </div>
 
         {/* Khối bên phải: Nội dung Text & Icons */}
         <div className="about-right">
-          <h1 className="greeting-text">Hello!</h1>
+          <h1 className="greeting-text">Xin chào!</h1>
           
           <div className="bio-text">
             <p>
@@ -36,15 +36,16 @@ function AboutMe() {
 
           <hr className="divider-line" />
 
-          {/* Hàng chứa các công cụ phần mềm */}
+          {/* Hàng chứa các công cụ phần mềm / Skill */}
           <div className="tools-grid">
             <div className="tool-column">
-              <h3>Design Tools:</h3>
+              <h3>Skill:</h3>
               <div className="icon-group">
                 <span className="tool-icon">Ps</span>
                 <span className="tool-icon">Ai</span>
                 <span className="tool-icon">Pr</span>
                 <span className="tool-icon">Ae</span>
+                <span className="tool-icon">Capcut</span>
               </div>
             </div>
           </div>

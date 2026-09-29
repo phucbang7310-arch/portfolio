@@ -5,16 +5,12 @@ function MusicVideoProject() {
   return (
     <section className="mv-project-section">
       {/* 1. Ảnh banner tiêu đề ở trên cùng */}
-      {/* <div className="mv-banner">
+      <div className="mv-banner">
         <img 
-          src="/music-video-banner.png" 
-          alt="Music Video Title Banner" 
+          src="/photographer-banner.png" 
+          alt="Photographer" 
           className="mv-banner-img"
         />
-      </div> */}
-
-      <div className="mv-banner-text-wrapper">
-        <h1 className="mv-text-title-script">Music Video</h1>
       </div>
 
       <div className="mv-content-container">

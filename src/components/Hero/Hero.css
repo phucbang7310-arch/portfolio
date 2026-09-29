@@ -6,16 +6,20 @@
     height: 100vh;
     background-color: #000000;
     overflow: hidden;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Đảm bảo ảnh nền căng đét full màn hình và nét */
+/* Đảm bảo ảnh nền căng full màn hình và giữ độ nét tối đa */
 .hero-bg-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
     display: block;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 }
 
 /* Lớp phủ nội dung đè lên ảnh */

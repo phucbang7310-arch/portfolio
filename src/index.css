@@ -1,4 +1,4 @@
-﻿/* Đảm bảo toàn trang không bị padding/margin mặc định làm lệch ảnh */
+/* Đảm bảo toàn trang không bị padding/margin mặc định làm lệch ảnh */
 html,
 body {
   margin: 0;
@@ -12,8 +12,10 @@ body {
 
 .portfolio-container {
   width: 100%;
-  display: block;
-  /* Dùng block để ảnh tự động xếp chồng dọc hoàn hảo */
+  display: flex;
+  flex-direction: column;
+  gap: max(3cm, 114px);
+  box-sizing: border-box;
 }
 
 .hero-image {
