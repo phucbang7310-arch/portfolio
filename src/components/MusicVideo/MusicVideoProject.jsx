@@ -17,27 +17,13 @@ function MusicVideoProject() {
         {/* 2. Khối thông tin chung (Intro) */}
         <div className="mv-intro-block">
           <div className="mv-intro-left">
-            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=600" alt="Main project cover" className="mv-cover-img" />
+            <img src="/not-tra-banner.png" alt="Main project cover" className="mv-cover-img" />
           </div>
           <div className="mv-intro-right">
-            <span className="mv-category">Marketing Music Video</span>
-            <h1 className="mv-project-title">| GIỮ SỨC KHỎE EM ƠI</h1>
+            <h1 className="mv-project-title">| NỐT TRÀ - NỐT HƯƠNG ĐẬM VỊ</h1>
             
             <div className="mv-tags">
-              <span className="mv-tag">Music Video</span>
-              <span className="mv-tag">Photoshoot</span>
-              <span className="mv-tag">Storyboard Supervisor</span>
-            </div>
-
-            <div className="mv-description">
-              <p><strong>"GIỮ SỨC KHỎE EM ƠI"</strong> is a marketing music video produced for GSK. The main objective was to raise awareness of the dangers of pneumococcal bacteria through a charming storyline combined with a catchy, replayable melody that appeals to both parents and children.</p>
-              <p>In this project, I collaborated directly with the Art Director to ensure photos aligned with the storyboard, guiding posing and visual mood with the photographer, and proposing creative solutions for approval to achieve the intended direction.</p>
-            </div>
-
-            <div className="mv-clients">
-              <span className="client-label">Clients:</span>
-              <span className="client-tag outline-orange">GSK</span>
-              <span className="client-tag">MSL</span>
+              <span className="mv-tag">PHOTOGRAPHER</span>
             </div>
           </div>
         </div>
