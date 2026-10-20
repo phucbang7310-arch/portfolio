@@ -1,5 +1,26 @@
-import React from 'react';
-import './MotionGraphicProject.css';
+import StoryboardGallery from '../common/StoryboardGallery';
+
+const mgStoryboardImages = [
+  { id: 1, src: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200", title: "Storyboard 1", alt: "Storyboard Frame 1" },
+  { id: 2, src: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200", title: "Storyboard 2", alt: "Storyboard Frame 2" },
+  { id: 3, src: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200", title: "Storyboard 3", alt: "Storyboard Frame 3" },
+  { id: 4, src: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200", title: "Storyboard 4", alt: "Storyboard Frame 4" },
+  { id: 5, src: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200", title: "Storyboard 5", alt: "Storyboard Frame 5" },
+  { id: 6, src: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200", title: "Storyboard 6", alt: "Storyboard Frame 6" },
+  { id: 7, src: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200", title: "Storyboard 7", alt: "Storyboard Frame 7" },
+  { id: 8, src: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200", title: "Storyboard 8", alt: "Storyboard Frame 8" },
+];
+
+const mgDesignImages = [
+  { id: 1, src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200", title: "Design 1", alt: "Design Asset 1" },
+  { id: 2, src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200", title: "Design 2", alt: "Design Asset 2" },
+  { id: 3, src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200", title: "Design 3", alt: "Design Asset 3" },
+  { id: 4, src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200", title: "Design 4", alt: "Design Asset 4" },
+  { id: 5, src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200", title: "Design 5", alt: "Design Asset 5" },
+  { id: 6, src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200", title: "Design 6", alt: "Design Asset 6" },
+  { id: 7, src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200", title: "Design 7", alt: "Design Asset 7" },
+  { id: 8, src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200", title: "Design 8", alt: "Design Asset 8" },
+];
 
 function MotionGraphicProject() {
   return (
@@ -37,34 +58,22 @@ function MotionGraphicProject() {
           </div>
         </div>
 
-        {/* 3. Phân đoạn Storyboard (Lưới 4 cột ảnh phác thảo phác thảo sketch trắng đen) */}
+        {/* 3. Phân đoạn Storyboard (Thanh trượt 5 ảnh đại diện, hover zoom, xem trọn bộ qua modal) */}
         <div className="mg-section-block">
-          <h2 className="mg-sub-title">Storyboard</h2>
-          <div className="mg-storyboard-grid">
-            <div className="mg-sb-item"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400" alt="Storyboard 1" /></div>
-            <div className="mg-sb-item"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400" alt="Storyboard 2" /></div>
-            <div className="mg-sb-item"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400" alt="Storyboard 3" /></div>
-            <div className="mg-sb-item"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400" alt="Storyboard 4" /></div>
-            <div className="mg-sb-item"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400" alt="Storyboard 5" /></div>
-            <div className="mg-sb-item"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400" alt="Storyboard 6" /></div>
-            <div className="mg-sb-item"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400" alt="Storyboard 7" /></div>
-            <div className="mg-sb-item"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400" alt="Storyboard 8" /></div>
-          </div>
+          <StoryboardGallery 
+            images={mgStoryboardImages} 
+            title="Storyboard"
+            visibleCount={5}
+          />
         </div>
 
-        {/* 4. Phân đoạn Design (Lưới 4 cột ảnh màu sắc hoàn thiện) */}
+        {/* 4. Phân đoạn Design (Thanh trượt 5 ảnh đại diện, hover zoom, xem trọn bộ qua modal) */}
         <div className="mg-section-block">
-          <h2 className="mg-sub-title">Design</h2>
-          <div className="mg-design-grid">
-            <div className="mg-ds-item"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=400" alt="Design 1" /></div>
-            <div className="mg-ds-item"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=400" alt="Design 2" /></div>
-            <div className="mg-ds-item"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=400" alt="Design 3" /></div>
-            <div className="mg-ds-item"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=400" alt="Design 4" /></div>
-            <div className="mg-ds-item"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=400" alt="Design 5" /></div>
-            <div className="mg-ds-item"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=400" alt="Design 6" /></div>
-            <div className="mg-ds-item"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=400" alt="Design 7" /></div>
-            <div className="mg-ds-item"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=400" alt="Design 8" /></div>
-          </div>
+          <StoryboardGallery 
+            images={mgDesignImages} 
+            title="Design"
+            visibleCount={5}
+          />
         </div>
 
         {/* 5. Phân đoạn Mockup Laptop (3 máy xếp hàng ngang, máy giữa to hơn) */}

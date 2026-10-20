@@ -46,7 +46,7 @@
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 6px;
+    border-radius: 8px;
     object-fit: cover;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;

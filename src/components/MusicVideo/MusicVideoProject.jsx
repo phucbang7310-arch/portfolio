@@ -1,4 +1,6 @@
 import React from 'react';
+import StoryboardGallery from '../common/StoryboardGallery';
+import { notTraStoryboardImages } from '../../data/notTraStoryboardData';
 import './MusicVideoProject.css';
 
 function MusicVideoProject() {
@@ -17,7 +19,7 @@ function MusicVideoProject() {
         {/* 2. Khối thông tin chung (Intro) */}
         <div className="mv-intro-block">
           <div className="mv-intro-left">
-            <img src="/not-tra-banner.png" alt="Main project cover" className="mv-cover-img" />
+            <img src="/not-tra-banner.png" alt="Nốt Trà - Nốt Hương Đậm Vị" className="mv-cover-img" />
           </div>
           <div className="mv-intro-right">
             <h1 className="mv-project-title">| NỐT TRÀ - NỐT HƯƠNG ĐẬM VỊ</h1>
@@ -28,19 +30,30 @@ function MusicVideoProject() {
           </div>
         </div>
 
-        {/* 3. Phần Storyboard (Lưới 4 cột) */}
+        {/* 3. Phần Photographer (Thanh trượt đại diện 5 ảnh, hover zoom, xem trọn bộ qua lightbox) */}
         <div className="mv-section-block">
-          <h2 className="mv-sub-title">Storyboard</h2>
-          <div className="storyboard-grid">
-            {/* Bạn thay src bằng ảnh thật từ F10A đến F15A */}
-            <div className="sb-item"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400" alt="F10A" /></div>
-            <div className="sb-item"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400" alt="F10B" /></div>
-            <div className="sb-item"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400" alt="F11" /></div>
-            <div className="sb-item"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400" alt="F12A" /></div>
-            <div className="sb-item"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400" alt="F12B" /></div>
-            <div className="sb-item"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400" alt="F13" /></div>
-            <div className="sb-item"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400" alt="F14" /></div>
-            <div className="sb-item"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400" alt="F15A" /></div>
+          <StoryboardGallery 
+            images={notTraStoryboardImages} 
+            title="Photographer"
+            visibleCount={5}
+          />
+        </div>
+
+        {/* Khối thông tin dự án (Intro phía trên Photoshoot) */}
+        <div className="mv-intro-block">
+          <div className="mv-intro-left">
+            <img 
+              src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=600" 
+              alt="Project Cover" 
+              className="mv-cover-img" 
+            />
+          </div>
+          <div className="mv-intro-right">
+            <h1 className="mv-project-title">| MUSIC VIDEO</h1>
+            
+            <div className="mv-tags">
+              <span className="mv-tag">VIDEOGRAPHER</span>
+            </div>
           </div>
         </div>
 
