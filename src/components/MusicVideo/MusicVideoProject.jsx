@@ -1,6 +1,7 @@
 import React from 'react';
 import StoryboardGallery from '../common/StoryboardGallery';
 import { notTraStoryboardImages } from '../../data/notTraStoryboardData';
+import { danLatStoryboardImages } from '../../data/danLatStoryboardData';
 import './MusicVideoProject.css';
 
 function MusicVideoProject() {
@@ -30,11 +31,20 @@ function MusicVideoProject() {
           </div>
         </div>
 
-        {/* 3. Phần Photographer (Thanh trượt đại diện 5 ảnh, hover zoom, xem trọn bộ qua lightbox) */}
+        {/* 3. Phần Trung Thu */}
         <div className="mv-section-block">
           <StoryboardGallery 
             images={notTraStoryboardImages} 
-            title="Photographer"
+            title="Trung Thu"
+            visibleCount={5}
+          />
+        </div>
+
+        {/* 3b. Mục Ngày 20/10 - Nốt Trà */}
+        <div className="mv-section-block">
+          <StoryboardGallery
+            images={notTraStoryboardImages}
+            title="Ngày 20/10"
             visibleCount={5}
           />
         </div>
@@ -43,30 +53,28 @@ function MusicVideoProject() {
         <div className="mv-intro-block">
           <div className="mv-intro-left">
             <img 
-              src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=600" 
-              alt="Project Cover" 
-              className="mv-cover-img" 
+              src="/dan-lat-banner.png" 
+              alt="Đan Lát Café - Thu Đầy Giỏ" 
+              className="mv-cover-img mv-cover-img--wide" 
             />
           </div>
           <div className="mv-intro-right">
-            <h1 className="mv-project-title">| MUSIC VIDEO</h1>
+            <h1 className="mv-project-title">| ĐAN LÁT CAFÉ</h1>
             
             <div className="mv-tags">
               <span className="mv-tag">VIDEOGRAPHER</span>
+              <span className="mv-tag">PHOTOGRAPHER</span>
             </div>
           </div>
         </div>
 
-        {/* 4. Phần Photoshoot (Ảnh giữa to nổi bật) */}
+        {/* 4. Phần Photographer - Đan Lát Café */}
         <div className="mv-section-block">
-          <h2 className="mv-sub-title">Photoshoot</h2>
-          <div className="photoshoot-flex">
-            <div className="ps-item side"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400" alt="Photoshoot 1" /></div>
-            <div className="ps-item side"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400" alt="Photoshoot 2" /></div>
-            <div className="ps-item center"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=500" alt="Photoshoot Center" /></div>
-            <div className="ps-item side"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400" alt="Photoshoot 3" /></div>
-            <div className="ps-item side"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400" alt="Photoshoot 4" /></div>
-          </div>
+          <StoryboardGallery
+            images={notTraStoryboardImages}
+            title="Photographer"
+            visibleCount={5}
+          />
         </div>
 
         <div className="mv-section-block">

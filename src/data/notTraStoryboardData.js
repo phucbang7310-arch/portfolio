@@ -23,12 +23,7 @@ export const notTraStoryboardImages = [
     title: 'Bàn trà & Ánh sáng tự nhiên',
     alt: 'Không gian bàn trà Nốt Trà với ánh sáng tự nhiên qua khung cửa'
   },
-  {
-    id: 5,
-    src: '/projects/not-tra/DSC05646.jpg',
-    title: 'Góc trò chuyện mộc mạc',
-    alt: 'Không gian góc nhỏ ấm cúng tại quán trà'
-  },
+
   {
     id: 6,
     src: '/projects/not-tra/DSC05649.jpg',
@@ -119,18 +114,7 @@ export const notTraStoryboardImages = [
     title: 'Nét tinh tế đồ uống',
     alt: 'Cận cảnh món trà đặc biệt'
   },
-  {
-    id: 21,
-    src: '/projects/not-tra/DSC06072.jpg',
-    title: 'Góc pha chế sáng tạo',
-    alt: 'Khu vực quầy bar hiện đại'
-  },
-  {
-    id: 22,
-    src: '/projects/not-tra/DSC06073.jpg',
-    title: 'Hương vị tự nhiên',
-    alt: 'Thành phần nguyên liệu tươi mới'
-  },
+
   {
     id: 23,
     src: '/projects/not-tra/DSC06819.jpg',

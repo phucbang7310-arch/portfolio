@@ -36,7 +36,7 @@
 /* --- Khối Intro --- */
 .mv-intro-block {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 2fr;
     gap: 50px;
     align-items: center;
     margin-bottom: 80px;
@@ -50,6 +50,15 @@
     object-fit: cover;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
+}
+
+/* Variant cho ảnh ngang rộng như banner Đan Lát */
+.mv-cover-img--wide {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
 }
 
 .mv-category {
