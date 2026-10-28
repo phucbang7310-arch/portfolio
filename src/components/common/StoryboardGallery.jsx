@@ -22,6 +22,7 @@ function StoryboardCard({
   globalIdx, 
   isExtraCard, 
   totalExtra, 
+  isSpotlight,
   onClick 
 }) {
   const cardRef = useRef(null);
@@ -52,7 +53,7 @@ function StoryboardCard({
   return (
     <div 
       ref={cardRef}
-      className={`mosaic-card card-item-${index} ${isExtraCard ? 'has-extra-count' : ''}`}
+      className={`mosaic-card card-item-${index} ${isExtraCard ? 'has-extra-count' : ''} ${isSpotlight ? 'is-spotlight-card' : ''}`}
       onClick={onClick}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
@@ -64,6 +65,14 @@ function StoryboardCard({
           className="mosaic-card-img"
           loading="lazy"
         />
+
+        {/* Huy hiệu Spotlight cho thẻ ảnh Hero chính */}
+        {isSpotlight && (
+          <div className="spotlight-badge">
+            <Sparkles size={13} className="sparkle-icon" />
+            <span>Spotlight</span>
+          </div>
+        )}
 
         {/* Lớp phủ tương tác khi rê chuột (Hover Zoom Overlay) */}
         <div className="mosaic-card-overlay">
@@ -101,8 +110,11 @@ function StoryboardCard({
 export default function StoryboardGallery({ 
   images = [], 
   title = "Storyboard",
-  defaultLayout = "bento"
+  defaultLayout = "bento",
+  bentoVariant = "default", // 'default' | 'spotlight'
+  variant
 }) {
+  const activeBentoVariant = variant || bentoVariant;
   const [modalOpen, setModalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [viewMode, setViewMode] = useState('single'); // 'single' | 'grid'
@@ -341,71 +353,131 @@ export default function StoryboardGallery({
               </>
             )}
 
-            <div className={`mosaic-collage-container animate-${slideDirection} ${isAnimating ? 'is-animating' : ''}`}>
-              
-              {/* CỘT TRÁI (LEFT SECTION ~ 58-60% TỔNG CHIỀU RỘNG): 
-                  - Hàng trên: 2 ảnh cạnh nhau (card 0 & card 1)
-                  - Hàng dưới: 1 ảnh ngang rộng (card 2)
-              */}
-              <div className="mosaic-section-left">
-                <div className="mosaic-left-top-row">
+            {activeBentoVariant === 'spotlight' ? (
+              /* ================= BỐ CỤC BENTO SPOTLIGHT (1 HERO LỚN + 4 ẢNH PHỤ) ================= */
+              <div className={`mosaic-collage-container bento-spotlight animate-${slideDirection} ${isAnimating ? 'is-animating' : ''}`}>
+                {/* CỘT TRÁI: 1 Ảnh Hero Spotlight lớn cao trọn vẹn */}
+                <div className="spotlight-hero-section">
                   {pageImages[0] && (
                     <StoryboardCard 
                       image={pageImages[0]}
                       index={0}
                       globalIdx={startIndex + 0}
+                      isSpotlight={true}
                       onClick={() => openModal(startIndex + 0, 'single')}
-                    />
-                  )}
-                  {pageImages[1] && (
-                    <StoryboardCard 
-                      image={pageImages[1]}
-                      index={1}
-                      globalIdx={startIndex + 1}
-                      onClick={() => openModal(startIndex + 1, 'single')}
                     />
                   )}
                 </div>
 
-                {pageImages[2] && (
-                  <div className="mosaic-left-bottom-row">
-                    <StoryboardCard 
-                      image={pageImages[2]}
-                      index={2}
-                      globalIdx={startIndex + 2}
-                      onClick={() => openModal(startIndex + 2, 'single')}
-                    />
+                {/* CỘT PHẢI: 4 ảnh phụ xếp lưới 2x2 linh hoạt */}
+                <div className="spotlight-grid-section">
+                  <div className="spotlight-grid-row">
+                    {pageImages[1] && (
+                      <StoryboardCard 
+                        image={pageImages[1]}
+                        index={1}
+                        globalIdx={startIndex + 1}
+                        onClick={() => openModal(startIndex + 1, 'single')}
+                      />
+                    )}
+                    {pageImages[2] && (
+                      <StoryboardCard 
+                        image={pageImages[2]}
+                        index={2}
+                        globalIdx={startIndex + 2}
+                        onClick={() => openModal(startIndex + 2, 'single')}
+                      />
+                    )}
                   </div>
-                )}
+                  <div className="spotlight-grid-row">
+                    {pageImages[3] && (
+                      <StoryboardCard 
+                        image={pageImages[3]}
+                        index={3}
+                        globalIdx={startIndex + 3}
+                        onClick={() => openModal(startIndex + 3, 'single')}
+                      />
+                    )}
+                    {pageImages[4] && (
+                      <StoryboardCard 
+                        image={pageImages[4]}
+                        index={4}
+                        globalIdx={startIndex + 4}
+                        isExtraCard={currentPage === 0 && totalExtraImages > 0}
+                        totalExtra={totalExtraImages}
+                        onClick={() => openModal(startIndex + 4, currentPage === 0 && totalExtraImages > 0 ? 'grid' : 'single')}
+                      />
+                    )}
+                  </div>
+                </div>
               </div>
+            ) : (
+              /* ================= BỐ CỤC BENTO TIÊU CHUẨN ================= */
+              <div className={`mosaic-collage-container animate-${slideDirection} ${isAnimating ? 'is-animating' : ''}`}>
+                {/* CỘT TRÁI (LEFT SECTION ~ 58-60% TỔNG CHIỀU RỘNG): 
+                    - Hàng trên: 2 ảnh cạnh nhau (card 0 & card 1)
+                    - Hàng dưới: 1 ảnh ngang rộng (card 2)
+                */}
+                <div className="mosaic-section-left">
+                  <div className="mosaic-left-top-row">
+                    {pageImages[0] && (
+                      <StoryboardCard 
+                        image={pageImages[0]}
+                        index={0}
+                        globalIdx={startIndex + 0}
+                        onClick={() => openModal(startIndex + 0, 'single')}
+                      />
+                    )}
+                    {pageImages[1] && (
+                      <StoryboardCard 
+                        image={pageImages[1]}
+                        index={1}
+                        globalIdx={startIndex + 1}
+                        onClick={() => openModal(startIndex + 1, 'single')}
+                      />
+                    )}
+                  </div>
 
-              {/* CỘT PHẢI (RIGHT SECTION ~ 40-42% TỔNG CHIỀU RỘNG): 
-                  - Trên: 1 ảnh cao lớn (card 3)
-                  - Dưới: 1 ảnh ngang (card 4 kèm huy hiệu +N ảnh nếu có)
-              */}
-              <div className="mosaic-section-right">
-                {pageImages[3] && (
-                  <StoryboardCard 
-                    image={pageImages[3]}
-                    index={3}
-                    globalIdx={startIndex + 3}
-                    onClick={() => openModal(startIndex + 3, 'single')}
-                  />
-                )}
+                  {pageImages[2] && (
+                    <div className="mosaic-left-bottom-row">
+                      <StoryboardCard 
+                        image={pageImages[2]}
+                        index={2}
+                        globalIdx={startIndex + 2}
+                        onClick={() => openModal(startIndex + 2, 'single')}
+                      />
+                    </div>
+                  )}
+                </div>
 
-                {pageImages[4] && (
-                  <StoryboardCard 
-                    image={pageImages[4]}
-                    index={4}
-                    globalIdx={startIndex + 4}
-                    isExtraCard={currentPage === 0 && totalExtraImages > 0}
-                    totalExtra={totalExtraImages}
-                    onClick={() => openModal(startIndex + 4, currentPage === 0 && totalExtraImages > 0 ? 'grid' : 'single')}
-                  />
-                )}
+                {/* CỘT PHẢI (RIGHT SECTION ~ 40-42% TỔNG CHIỀU RỘNG): 
+                    - Trên: 1 ảnh cao lớn (card 3)
+                    - Dưới: 1 ảnh ngang (card 4 kèm huy hiệu +N ảnh nếu có)
+                */}
+                <div className="mosaic-section-right">
+                  {pageImages[3] && (
+                    <StoryboardCard 
+                      image={pageImages[3]}
+                      index={3}
+                      globalIdx={startIndex + 3}
+                      onClick={() => openModal(startIndex + 3, 'single')}
+                    />
+                  )}
+
+                  {pageImages[4] && (
+                    <StoryboardCard 
+                      image={pageImages[4]}
+                      index={4}
+                      globalIdx={startIndex + 4}
+                      isExtraCard={currentPage === 0 && totalExtraImages > 0}
+                      totalExtra={totalExtraImages}
+                      onClick={() => openModal(startIndex + 4, currentPage === 0 && totalExtraImages > 0 ? 'grid' : 'single')}
+                    />
+                  )}
+                </div>
+
               </div>
-
-            </div>
+            )}
           </div>
 
           {/* Thanh điều hướng Dots dưới đáy & Lời nhắc tương tác */}

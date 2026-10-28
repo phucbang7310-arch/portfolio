@@ -2,6 +2,8 @@ import React from 'react';
 import StoryboardGallery from '../common/StoryboardGallery';
 import { notTraStoryboardImages } from '../../data/notTraStoryboardData';
 import { danLatStoryboardImages } from '../../data/danLatStoryboardData';
+import { ngay2010StoryboardImages } from '../../data/ngay2010StoryboardData';
+import { dailyStoryboardImages } from '../../data/dailyStoryboardData';
 import './MusicVideoProject.css';
 
 function MusicVideoProject() {
@@ -43,8 +45,18 @@ function MusicVideoProject() {
         {/* 3b. Mục Ngày 20/10 - Nốt Trà */}
         <div className="mv-section-block">
           <StoryboardGallery
-            images={notTraStoryboardImages}
+            images={ngay2010StoryboardImages}
             title="Ngày 20/10"
+            visibleCount={5}
+          />
+        </div>
+
+        {/* 3c. Mục Daily - Nốt Trà (Bố cục Bento Spotlight) */}
+        <div className="mv-section-block">
+          <StoryboardGallery
+            images={dailyStoryboardImages}
+            title="Daily"
+            bentoVariant="spotlight"
             visibleCount={5}
           />
         </div>
