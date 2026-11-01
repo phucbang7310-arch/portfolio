@@ -70,6 +70,20 @@
     text-align: center;
 }
 
+.contents-item.contents-item-clickable {
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.contents-item.contents-item-clickable:hover {
+    transform: translateY(-8px);
+}
+
+.contents-item.contents-item-clickable:hover .item-number,
+.contents-item.contents-item-clickable:hover .item-title {
+    color: #ffd600;
+}
+
 /* Tạo độ lệch hàng dưới */
 .contents-grid .contents-item:nth-child(n+4) {
     transform: translateY(30px);

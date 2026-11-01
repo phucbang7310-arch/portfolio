@@ -1,0 +1,499 @@
+/* ================= 6 FOLDERS PHOTOGRAPHER COMPONENT ================= */
+.photographer-folders-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px 90px;
+  box-sizing: border-box;
+}
+
+/* Header khối 6 thư mục */
+.folders-header-block {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 50px;
+}
+
+.folders-caption {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 214, 0, 0.08);
+  border: 1px solid rgba(255, 214, 0, 0.3);
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.caption-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #ffd600;
+  box-shadow: 0 0 8px #ffd600;
+}
+
+.caption-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #ffd600;
+  text-transform: uppercase;
+}
+
+.folders-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  margin: 0 0 14px;
+}
+
+.folders-subtext {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #a0a0a0;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ================= GRID 6 FOLDERS ================= */
+.folders-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Thẻ Folder Card */
+.folder-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.folder-card:focus-visible {
+  outline: 2px solid #ffd600;
+  outline-offset: 4px;
+  border-radius: 16px;
+}
+
+.folder-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Tab Header phía trên mô phỏng tai thư mục (Folder Tab) */
+.folder-tab-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  height: 38px;
+}
+
+.folder-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #18181c;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  border-left: 1px solid rgba(255, 255, 255, 0.16);
+  border-right: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px 12px 0 0;
+  padding: 8px 16px;
+  color: #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.folder-tab-icon {
+  color: #ffd600;
+  transition: transform 0.3s ease;
+}
+
+.folder-tab-number {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.folder-tab-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #888888;
+  padding-bottom: 6px;
+  padding-right: 4px;
+}
+
+.folder-card:hover .folder-tab {
+  background: #22222a;
+  border-color: rgba(255, 214, 0, 0.5);
+  color: #ffffff;
+}
+
+.folder-card:hover .folder-tab-icon {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+/* Thân của Folder (Folder Body) */
+.folder-card-body {
+  position: relative;
+  background: #141417;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0 16px 16px 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease, background 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.folder-card:hover .folder-card-body {
+  border-color: #ffd600;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 214, 0, 0.22);
+}
+
+/* ================= THƯ MỤC TRỐNG (BLANK PLACEHOLDER) ================= */
+.folder-card-blank {
+  opacity: 0.85;
+}
+
+.folder-card-blank:hover {
+  opacity: 1;
+}
+
+.folder-tab.tab-blank {
+  background: #121215;
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #777777;
+}
+
+.folder-tab.tab-blank .folder-tab-icon {
+  color: #666666;
+}
+
+.folder-card-blank:hover .folder-tab.tab-blank {
+  color: #e0e0e0;
+  border-color: rgba(255, 214, 0, 0.35);
+}
+
+.folder-card-blank:hover .folder-tab.tab-blank .folder-tab-icon {
+  color: #ffd600;
+}
+
+.folder-card-blank .folder-card-body {
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  background: #0e0e11;
+  justify-content: center;
+  align-items: center;
+}
+
+.folder-card-blank:hover .folder-card-body {
+  border-color: rgba(255, 214, 0, 0.4);
+  background: #121216;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.7);
+}
+
+.folder-blank-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 24px;
+}
+
+.blank-icon-wrap {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555555;
+  margin-bottom: 18px;
+  transition: all 0.3s ease;
+}
+
+.folder-card-blank:hover .blank-icon-wrap {
+  background: rgba(255, 214, 0, 0.08);
+  border-color: rgba(255, 214, 0, 0.4);
+  color: #ffd600;
+  transform: scale(1.08);
+}
+
+.blank-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #888888;
+  margin: 0 0 8px;
+  transition: color 0.3s ease;
+}
+
+.folder-card-blank:hover .blank-title {
+  color: #ffffff;
+}
+
+.blank-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: #666666;
+  margin: 0 0 20px;
+}
+
+.blank-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 4px 12px;
+  border-radius: 20px;
+  color: #777777;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.blank-pill {
+  font-size: 0.7rem;
+  color: #666666;
+  font-style: italic;
+}
+
+/* ================= PREVIEW IMAGE TRONG FOLDER ================= */
+.folder-preview-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: #0a0a0c;
+}
+
+.folder-cover-wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.folder-cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.35s ease;
+}
+
+.folder-card:hover .folder-cover-image {
+  transform: scale(1.08);
+  filter: brightness(1.05);
+}
+
+.folder-image-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(20, 20, 23, 0.95) 100%);
+  pointer-events: none;
+}
+
+/* Category Badge góc trên */
+.folder-badge-category {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(12, 12, 15, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  color: #f0f0f0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.3px;
+  z-index: 2;
+}
+
+/* Hover overlay chỉ báo mở trang */
+.folder-open-hover-indicator {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #ffd600;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+}
+
+.folder-card:hover .folder-open-hover-indicator {
+  opacity: 1;
+}
+
+/* Khối thông tin Text bên dưới */
+.folder-info {
+  padding: 20px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: #141417;
+}
+
+.folder-meta-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.folder-timeline {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  color: #ffd600;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.folder-client {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  color: #888888;
+  font-weight: 500;
+}
+
+.folder-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 10px;
+  line-height: 1.35;
+  transition: color 0.3s ease;
+}
+
+.folder-card:hover .folder-title {
+  color: #ffd600;
+}
+
+.folder-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  color: #999999;
+  line-height: 1.55;
+  margin: 0 0 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Danh sách Tags */
+.folder-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.folder-tag-item {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #b0b0b0;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* Action Bar ở đáy card */
+.folder-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: auto;
+}
+
+.folder-action-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  transition: color 0.3s ease;
+}
+
+.folder-action-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.folder-card:hover .folder-action-text {
+  color: #ffd600;
+}
+
+.folder-card:hover .folder-action-arrow {
+  background: #ffd600;
+  color: #000000;
+  transform: translate(3px, -3px);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .folders-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 680px) {
+  .photographer-folders-wrapper {
+    padding: 40px 20px 60px;
+  }
+
+  .folders-heading {
+    font-size: 1.7rem;
+  }
+
+  .folders-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .folder-preview-container {
+    height: 180px;
+  }
+
+  .folder-card-body {
+    min-height: auto;
+  }
+}

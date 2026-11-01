@@ -1,7 +1,7 @@
 import React from 'react';
 import './Contents.css';
 
-function Contents() {
+function Contents({ onSelectPhotographer }) {
   const items = [
     { id: '01', title: 'Photographer' },
     { id: '02', title: 'Videographer' },
@@ -10,6 +10,16 @@ function Contents() {
     { id: '05', title: 'Editor' },
     { id: '06', title: 'Project Manager' },
   ];
+
+  const handleClickItem = (id) => {
+    if (id === '01') {
+      if (onSelectPhotographer) {
+        onSelectPhotographer();
+      } else {
+        document.getElementById('photographer-section')?.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
 
   return (
     <section className="contents-section">
@@ -34,7 +44,12 @@ function Contents() {
         {/* Khối danh mục số */}
         <div className="contents-grid">
           {items.map((item) => (
-            <div key={item.id} className="contents-item">
+            <div 
+              key={item.id} 
+              className={`contents-item ${item.id === '01' ? 'contents-item-clickable' : ''}`}
+              onClick={() => handleClickItem(item.id)}
+              title={item.id === '01' ? 'Nhấp để cuộn tới mục Photographer' : undefined}
+            >
               <div className="item-number">{item.id}</div>
               <div className="item-title">{item.title}</div>
             </div>
