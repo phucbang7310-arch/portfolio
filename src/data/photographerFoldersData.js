@@ -71,18 +71,57 @@ export const photographerFolders = [
     coverImage: '/dan-lat-banner.png',
     previewImages: [
       '/dan-lat-banner.png',
-      hatDeCuoiImages[0]?.src,
-      noelImages[0]?.src
+      tetImages[0]?.src,
+      hatDeCuoiImages[0]?.src
     ],
-    photoCount: hatDeCuoiImages.length + noelImages.length + longNhanDuaNonImages.length + tetImages.length + ngay2010DanLatImages.length + dailyDanLatImages.length + khongGianDanLatImages.length + trungThuDanLatImages.length, // 40 ảnh
+    photoCount: tetImages.length + hatDeCuoiImages.length + noelImages.length + longNhanDuaNonImages.length + ngay2010DanLatImages.length + dailyDanLatImages.length + khongGianDanLatImages.length + trungThuDanLatImages.length, // 220 ảnh
     date: '2024',
     client: 'Đan Lát Café',
     role: 'Videographer & Photographer',
-    description: 'Dự án hình ảnh và thước phim chuyển động cho Đan Lát Café với 8 bộ sưu tập: Hạt Dẻ Cười, Noel, Long Nhãn Dừa Non, Tết, Ngày 20/10, Daily, Không Gian và Trung Thu.',
+    description: 'Dự án hình ảnh và thước phim chuyển động cho Đan Lát Café với 8 bộ sưu tập: Tết 2026, Hạt Dẻ Cười, Noel, Long Nhãn Dừa Non, Ngày 20/10, Daily, Không Gian và Trung Thu.',
     brandBanner: '/dan-lat-banner.png',
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    videos: [
+      {
+        id: 'reel-1851457765488640',
+        title: 'Đan Lát Reel 01',
+        url: 'https://www.facebook.com/reel/1851457765488640',
+        embedUrl: 'https://www.facebook.com/plugins/video.php?height=640&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1851457765488640%2F&show_text=false&width=360'
+      },
+      {
+        id: 'reel-1225096119238051',
+        title: 'Đan Lát Reel 02',
+        url: 'https://www.facebook.com/reel/1225096119238051',
+        embedUrl: 'https://www.facebook.com/plugins/video.php?height=640&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1225096119238051%2F&show_text=false&width=360'
+      },
+      {
+        id: 'reel-814578961222061',
+        title: 'Đan Lát Reel 03',
+        url: 'https://www.facebook.com/reel/814578961222061',
+        embedUrl: 'https://www.facebook.com/plugins/video.php?height=640&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F814578961222061%2F&show_text=false&width=360'
+      },
+      {
+        id: 'reel-2261536621035255',
+        title: 'Đan Lát Reel 04',
+        url: 'https://www.facebook.com/reel/2261536621035255',
+        embedUrl: 'https://www.facebook.com/plugins/video.php?height=640&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2261536621035255%2F&show_text=false&width=360'
+      },
+      {
+        id: 'reel-746926064509161',
+        title: 'Đan Lát Reel 05',
+        url: 'https://www.facebook.com/reel/746926064509161',
+        embedUrl: 'https://www.facebook.com/plugins/video.php?height=640&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F746926064509161%2F&show_text=false&width=360'
+      }
+    ],
+    videoUrl: 'https://www.facebook.com/reel/1851457765488640',
     isEmpty: false,
     albums: [
+      {
+        id: 'tet-2026',
+        title: 'Tết 2026',
+        badge: `${tetImages.length} ảnh`,
+        description: 'Sắc xuân rộn rã ngày Tết 2026 với hoa mai, câu đối đỏ và khay mứt tết truyền thống.',
+        images: tetImages
+      },
       {
         id: 'hat-de-cuoi',
         title: 'Hạt Dẻ Cười',
@@ -103,13 +142,6 @@ export const photographerFolders = [
         badge: `${longNhanDuaNonImages.length} ảnh`,
         description: 'Thức uống Long Nhãn Dừa Non tươi mát thanh lành từ nguyên liệu tự nhiên.',
         images: longNhanDuaNonImages
-      },
-      {
-        id: 'tet',
-        title: 'Tết',
-        badge: `${tetImages.length} ảnh`,
-        description: 'Sắc xuân rộn rã ngày Tết Nguyên Đán với hoa mai, câu đối đỏ và khay mứt tết.',
-        images: tetImages
       },
       {
         id: 'ngay-2010',

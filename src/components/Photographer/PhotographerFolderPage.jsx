@@ -11,7 +11,9 @@ import {
   ChevronLeft,
   ChevronRight,
   Clock,
-  Sparkles
+  Sparkles,
+  Film,
+  ExternalLink
 } from 'lucide-react';
 import StoryboardGallery from '../common/StoryboardGallery';
 import { photographerFolders } from '../../data/photographerFoldersData';
@@ -269,19 +271,70 @@ export default function PhotographerFolderPage({
               ))}
             </div>
 
-            {/* ================= 5. VIDEO KHỐI (NẾU CÓ NHƯ ĐAN LÁT) ================= */}
-            {folder.videoUrl && (
+            {/* ================= 5. VIDEO KHỐI (WATCH VIDEO) ================= */}
+            {(folder.videos || folder.videoUrl) && (
               <div className="folder-video-container">
-                <h2 className="folder-video-title">Watch Video</h2>
-                <div className="video-responsive-container">
-                  <iframe
-                    src={folder.videoUrl}
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  ></iframe>
+                <div className="folder-video-header">
+                  <h2 className="folder-video-title">Watch Video</h2>
+                  {folder.videos && folder.videos.length > 0 && (
+                    <span className="folder-video-subtitle">
+                      {folder.videos.length} thước phim ngắn (Facebook Reels)
+                    </span>
+                  )}
                 </div>
+
+                {folder.videos && folder.videos.length > 0 ? (
+                  <div className="reels-grid-container">
+                    {folder.videos.map((vid, idx) => (
+                      <div key={vid.id || idx} className="reel-card">
+                        <div className="reel-card-header">
+                          <span className="reel-badge">
+                            <Film size={13} />
+                            REEL {idx + 1 < 10 ? `0${idx + 1}` : idx + 1}
+                          </span>
+                          <div className="reel-tags-right">
+                            <span className="reel-ratio-tag">9:16</span>
+                            <span className="reel-platform-tag">Facebook</span>
+                          </div>
+                        </div>
+
+                        <div className="reel-iframe-wrap">
+                          <iframe
+                            src={vid.embedUrl || vid.url}
+                            title={vid.title || `Video Reel ${idx + 1}`}
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen
+                            scrolling="no"
+                          ></iframe>
+                        </div>
+
+                        <div className="reel-card-footer">
+                          <a 
+                            href={vid.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="reel-fb-link"
+                            title="Mở xem trực tiếp trên Facebook"
+                          >
+                            <span>Xem trên Facebook</span>
+                            <ExternalLink size={13} />
+                          </a>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="video-responsive-container">
+                    <iframe
+                      src={folder.videoUrl}
+                      title="Video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                )}
               </div>
             )}
           </>

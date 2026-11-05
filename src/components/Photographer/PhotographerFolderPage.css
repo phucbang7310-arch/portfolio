@@ -558,12 +558,159 @@
   box-sizing: border-box;
 }
 
+.folder-video-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 .folder-video-title {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   color: #ffffff;
-  margin: 0 0 24px;
+  margin: 0;
+}
+
+.folder-video-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  color: #ffd600;
+  background: rgba(255, 214, 0, 0.08);
+  border: 1px solid rgba(255, 214, 0, 0.25);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* Lưới Reels hiển thị các video dọc Facebook chuẩn tỷ lệ 9:16 */
+.reels-grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.reel-card {
+  flex: 0 1 300px;
+  max-width: 320px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #121216;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reel-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 214, 0, 0.5);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 214, 0, 0.15);
+}
+
+.reel-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.reel-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #ffd600;
+  letter-spacing: 0.5px;
+}
+
+.reel-tags-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.reel-ratio-tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #ffd600;
+  background: rgba(255, 214, 0, 0.12);
+  border: 1px solid rgba(255, 214, 0, 0.3);
+  padding: 2px 7px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.reel-platform-tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #1877f2;
+  background: rgba(24, 119, 242, 0.12);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* Khung chứa iframe khóa chặt tỷ lệ 9:16 dọc */
+.reel-iframe-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  background: #000000;
+  overflow: hidden;
+}
+
+.reel-iframe-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  overflow: hidden;
+}
+
+.reel-card-footer {
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.reel-fb-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 9px 12px;
+  border-radius: 6px;
+  background: rgba(24, 119, 242, 0.12);
+  border: 1px solid rgba(24, 119, 242, 0.3);
+  color: #4599ff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.reel-fb-link:hover {
+  background: #1877f2;
+  color: #ffffff;
 }
 
 .video-responsive-container {
@@ -722,6 +869,15 @@
 @media (max-width: 768px) {
   .folder-page-content {
     padding: 30px 20px 70px;
+  }
+
+  .folder-video-container {
+    padding: 24px 16px;
+  }
+
+  .reel-card {
+    flex: 0 1 100%;
+    max-width: 330px;
   }
 
   .detail-project-title {
