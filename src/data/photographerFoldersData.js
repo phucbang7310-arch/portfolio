@@ -12,6 +12,16 @@ import {
   khongGianDanLatImages,
   trungThuDanLatImages
 } from './danLatStoryboardData';
+import {
+  caNhanImages,
+  profileImages,
+  coupleImages,
+  coverConceptImages,
+  doAnSinhVienImages,
+  sanPhamImages,
+  suKienImages,
+  pscImages
+} from './toMoStudioStoryboardData';
 
 export const photographerFolders = [
   // ================= FOLDER 1: NỐT TRÀ =================
@@ -174,22 +184,85 @@ export const photographerFolders = [
     ]
   },
 
-  // ================= FOLDER 3: TẠM THỜI ĐỂ TRỐNG =================
+  // ================= FOLDER 3: TỜ MỜ STUDIO (8 GALLERY ẢNH) =================
   {
-    id: 'folder-03',
+    id: 'to-mo-studio',
     number: '03',
-    title: 'Folder 03',
-    subtitle: 'Dự án sắp cập nhật',
-    category: 'Đang cập nhật',
-    tags: ['SẮP CẬP NHẬT', 'COMING SOON'],
-    coverImage: null,
-    photoCount: 'Trống',
-    date: 'Upcoming',
-    client: '—',
-    role: 'Photographer',
-    description: 'Thư mục dự án đang trong quá trình chuẩn bị hình ảnh và sẽ sớm được cập nhật.',
-    isEmpty: true,
-    albums: []
+    title: 'Tờ mờ studio',
+    subtitle: 'Tờ mờ studio — TM STUDIO',
+    category: 'Commercial & Studio',
+    tags: ['STUDIO', 'PHOTOGRAPHER', '8 BỘ SƯU TẬP'],
+    coverImage: '/to-mo-studio-banner.png',
+    previewImages: [
+      '/to-mo-studio-banner.png',
+      caNhanImages[0]?.src,
+      profileImages[0]?.src
+    ],
+    photoCount: caNhanImages.length + profileImages.length + coupleImages.length + coverConceptImages.length + doAnSinhVienImages.length + sanPhamImages.length + suKienImages.length + pscImages.length,
+    date: '2024',
+    client: 'Tờ mờ studio',
+    role: 'Lead Photographer & Retoucher',
+    description: 'Dự án nhiếp ảnh và sản xuất hình ảnh thương hiệu cho Tờ mờ studio với 8 bộ sưu tập: Cá Nhân, Profile, Couple, Cover Concept, Đồ Án Sinh Viên, Sản Phẩm, Sự Kiện và PSC.',
+    brandBanner: '/to-mo-studio-banner.png',
+    isEmpty: false,
+    albums: [
+      {
+        id: 'ca-nhan',
+        title: 'Cá Nhân',
+        badge: `${caNhanImages.length} ảnh`,
+        description: 'Chụp ảnh chân dung cá nhân phong cách nghệ thuật, tự nhiên và tôn vinh cá tính riêng.',
+        images: caNhanImages
+      },
+      {
+        id: 'profile',
+        title: 'Profile',
+        badge: `${profileImages.length} ảnh`,
+        description: 'Chân dung thương hiệu cá nhân, profile doanh nghiệp chuyên nghiệp và hiện đại.',
+        images: profileImages
+      },
+      {
+        id: 'couple',
+        title: 'Couple',
+        badge: `${coupleImages.length} ảnh`,
+        description: 'Những khoảnh khắc ngọt ngào, lãng mạn và tự nhiên của các cặp đôi.',
+        images: coupleImages
+      },
+      {
+        id: 'cover-concept',
+        title: 'Cover Concept',
+        badge: `${coverConceptImages.length} ảnh`,
+        description: 'Concept nghệ thuật ấn tượng, ánh sáng và màu sắc đậm chất thời trang và điện ảnh.',
+        images: coverConceptImages
+      },
+      {
+        id: 'do-an-sinh-vien',
+        title: 'Đồ Án Sinh Viên',
+        badge: `${doAnSinhVienImages.length} ảnh`,
+        description: 'Quay và chụp đồ án tốt nghiệp, thời trang và nghệ thuật thị giác cho sinh viên.',
+        images: doAnSinhVienImages
+      },
+      {
+        id: 'san-pham',
+        title: 'Sản Phẩm',
+        badge: `${sanPhamImages.length} ảnh`,
+        description: 'Hình ảnh sản phẩm thương mại chỉn chu, góc máy sắc sảo và tôn vinh chất liệu.',
+        images: sanPhamImages
+      },
+      {
+        id: 'su-kien',
+        title: 'Sự Kiện',
+        badge: `${suKienImages.length} ảnh`,
+        description: 'Bắt trọn không khí sống động và những khoảnh khắc đáng nhớ tại các sự kiện.',
+        images: suKienImages
+      },
+      {
+        id: 'psc',
+        title: 'PSC',
+        badge: `${pscImages.length} ảnh`,
+        description: 'Phóng sự cưới ghi lại chân thực từng nụ cười, giọt nước mắt hạnh phúc trong ngày trọng đại.',
+        images: pscImages
+      }
+    ]
   },
 
   // ================= FOLDER 4: TẠM THỜI ĐỂ TRỐNG =================

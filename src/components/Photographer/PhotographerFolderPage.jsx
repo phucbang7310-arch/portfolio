@@ -148,11 +148,19 @@ export default function PhotographerFolderPage({
                   <span>Khám phá Folder 02: Đan Lát</span>
                   <ChevronRight size={16} />
                 </button>
+                <button 
+                  type="button" 
+                  className="empty-btn-secondary"
+                  onClick={() => onSelectFolder('to-mo-studio')}
+                >
+                  <span>Khám phá Folder 03: Tờ mờ studio</span>
+                  <ChevronRight size={16} />
+                </button>
               </div>
             </div>
           </div>
         ) : (
-          /* ================= GIAO DIỆN FOLDER CÓ NỘI DUNG (FOLDER 1: NỐT TRÀ & FOLDER 2: ĐAN LÁT) ================= */
+          /* ================= GIAO DIỆN FOLDER CÓ NỘI DUNG ================= */
           <>
             {/* Khối Header giới thiệu dự án (Intro block) */}
             <div className="folder-detail-intro">
@@ -160,7 +168,7 @@ export default function PhotographerFolderPage({
                 <img 
                   src={folder.brandBanner || folder.coverImage} 
                   alt={folder.title} 
-                  className={`detail-cover-img ${folder.id === 'dan-lat' ? 'detail-cover-img--wide' : ''}`}
+                  className={`detail-cover-img ${folder.id === 'dan-lat' || folder.id === 'to-mo-studio' ? 'detail-cover-img--wide' : ''}`}
                 />
               </div>
 

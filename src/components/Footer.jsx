@@ -24,8 +24,8 @@ const Footer = () => {
       <div className="footer-grid">
         {/* Brand */}
         <div>
-          <h3 className="footer-brand-name">TRUNG HẬU — BORICA</h3>
-          <p className="footer-brand-tagline">PORTFOLIO / CREATIVE DESIGNER</p>
+          <h3 className="footer-brand-name">ANH THƠ</h3>
+          <p className="footer-brand-tagline">PORTFOLIO / CREATIVE MEDIA</p>
           <p className="footer-brand-desc">
             Bringing bold ideas to life through minimal, characterful visuals.
             Let's build your next great project together.
@@ -50,18 +50,18 @@ const Footer = () => {
           <div className="footer-contact">
             <div className="footer-contact-item">
               <Phone size={15} />
-              <a href="tel:0947934107">0947 934 107</a>
+              <a href="tel:+84983967621">+84 983 967 621</a>
             </div>
             <div className="footer-contact-item">
               <Mail size={15} />
-              <a href="mailto:heotrunghaucreativedesigner@gmail.com">
-                heotrunghaucreativedesigner@gmail.com
+              <a href="mailto:anhthoaj266@gmail.com">
+                anhthoaj266@gmail.com
               </a>
             </div>
             <div className="footer-contact-item">
               <Facebook size={15} />
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                Trung Hậu (Borica)
+                Anh Thơ
               </a>
             </div>
           </div>
@@ -69,11 +69,11 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <span>&copy; {new Date().getFullYear()} Trung Hậu — Borica. Crafted with precision.</span>
+        <span>&copy; {new Date().getFullYear()} Anh Thơ. Crafted with precision.</span>
         <div className="footer-made">
           <span>Made with</span>
           <Heart size={13} fill="#E8291C" color="#E8291C" />
-          <span>by Borica Creative</span>
+          <span>by Anh Thơ</span>
         </div>
       </div>
     </footer>

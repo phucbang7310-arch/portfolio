@@ -21,9 +21,9 @@ function ThankYou() {
 
         {/* Khối chứa hàng thông tin liên hệ bo góc ở đáy */}
         <div className="thanks-contact-row">
-          <span className="contact-badge">Borica</span>
-          <a href="mailto:Huynhhau274@gmail.com" className="contact-badge link">Huynhhau274@gmail.com</a>
-          <a href="tel:+84947193407" className="contact-badge link">+84947193407</a>
+          <span className="contact-badge">Anh Thơ</span>
+          <a href="mailto:anhthoaj266@gmail.com" className="contact-badge link">anhthoaj266@gmail.com</a>
+          <a href="tel:+84983967621" className="contact-badge link">+84 983 967 621</a>
         </div>
 
       </div>
